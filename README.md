@@ -524,7 +524,7 @@ ___
 [contributors-shield]: https://img.shields.io/github/contributors/kt007007/KTMinerProxy.svg?style=flat
 [contributors-url]: https://github.com/kt007007/KTMinerProxy/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/kt007007/KTMinerProxy.svg?style=flat
-[forks-url]: https://github.com/kt007007/KTMinerProxy/network/members
+[forks-url]: https://github.com/GoMinerTool/GoMinerTool/network/members
 [stars-shield]: https://img.shields.io/github/stars/kt007007/KTMinerProxy.svg?style=flat
 [stars-url]: https://github.com/kt007007/KTMinerProxy/stargazers
 [issues-shield]: https://img.shields.io/github/issues/kt007007/KTMinerProxy.svg?style=flat
