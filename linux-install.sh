@@ -4,7 +4,7 @@
 
 VERSION="2.5.2"
 
-DOWNLOAD_HOST="https://github.com/GoMinerTool/GoMinerTool"
+DOWNLOAD_HOST="https://github.com/GoMinerTool/GoMinerTool/raw/main/Linux-64"
 
 
 PATH_KT="/root/GoMinerTool"
