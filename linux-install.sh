@@ -212,16 +212,6 @@ installapp() {
         systemctl disable firewalld.service 1>/dev/null
     fi
 
-    colorEcho $BLUE "请选择下载线路1或2"
-    read -p "$(echo -e "请选择[1-2]：")" choose
-    case $choose in
-    2)
-        echo "已选择备用线路"
-        $DOWNLOAD_HOST=$DOWNLOAD_STANDBY
-    ;;
-    esac
-    
-
     colorEcho $BLUE "是否更新LINUX软件源？如果您的LINUX更新过可输入2跳过并继续安装，如果您不了解用途直接输入1。"
     read -p "$(echo -e "请选择[1-2]：")" choose
     case $choose in
