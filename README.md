@@ -511,7 +511,7 @@ ___
 
 # 联系我们
 
-电报: [https://t.me/+VK7ZOlKvcLljYjQ1](https://t.me/+VK7ZOlKvcLljYjQ1)
+电报: [https://t.me/MinerProxy_eth](https://t.me/MinerProxy_eth)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
