@@ -11,49 +11,21 @@ PATH_KT="/root/ktmproxy"
 
 PATH_EXEC="ktproxy"
 
-PATH_CACHE="/root/ktmproxy/.cache"
+PATH_CACHE="/root/GoMinerTool/.cache"
 
-PATH_LICENSE="/root/ktmproxy/license"
+PATH_LICENSE="/root/GoMinerTool/license"
 
-PATH_CONFIG="/root/ktmproxy/.env"
+PATH_CONFIG="/root/GoMinerTool/.env"
 
-PATH_NOHUP="/root/ktmproxy/nohup.out"
-PATH_ERR="/root/ktmproxy/err.log"
+PATH_NOHUP="/root/GoMinerTool/nohup.out"
+PATH_ERR="/root/GoMinerTool/err.log"
 
 
 PATH_TURN_ON="/etc/profile.d"
 PATH_TURN_ON_SH="/etc/profile.d/ktm.sh"
 
 ISSUE() {
-    echo "1.0.0"
-    echo "1.1.0"
-    echo "1.1.1"
-    echo "1.1.2"
-    echo "1.1.3"
-    echo "1.1.4"
-    echo "1.1.5"
-    echo "2.0.0"
-    echo "2.0.1"
-    echo "2.1.0"
-    echo "2.1.1"
-    echo "2.2.0"
-    echo "2.2.1"
-    echo "2.2.2"
-    echo "2.2.3"
-    echo "2.2.4"
-    echo "2.2.5"
-    echo "2.2.6"
-    echo "2.2.7"
-    echo "2.3.0"
-    echo "2.3.1"
-    echo "2.3.2"
-    echo "2.3.3"
-    echo "2.4.0"
-    echo "2.4.1"
-    echo "2.4.2"
-    echo "2.4.3"
-    echo "2.5.0"
-    echo "2.5.1"
+    echo "2.5.2"
 }
 
 colorEcho(){
@@ -145,7 +117,7 @@ clearlog() {
 }
 
 stop() {
-    colorEcho $BLUE "终止KTMinerProxy进程"
+    colorEcho $BLUE "终止GoMinerTool进程"
     killall ktproxy
     sleep 1
 }
@@ -207,12 +179,12 @@ turn_on() {
         echo 'if [ $COUNT -eq 0 ] && [ $(id -u) -eq 0 ]; then' >> $PATH_TURN_ON_SH
         echo "  cd ${PATH_KT}" >> $PATH_TURN_ON_SH
         echo "  nohup "${PATH_KT}/${PATH_EXEC}" 2>err.log &" >> $PATH_TURN_ON_SH
-        echo '  echo "KTProxy已启动"' >> $PATH_TURN_ON_SH
+        echo '  echo "GoMinerTool已启动"' >> $PATH_TURN_ON_SH
         echo 'else' >> $PATH_TURN_ON_SH
         echo '  if [ $COUNT -ne 0 ]; then' >> $PATH_TURN_ON_SH
-        echo '      echo "KTProxy已启动, 无需重复启动"' >> $PATH_TURN_ON_SH
+        echo '      echo "GoMinerTool已启动, 无需重复启动"' >> $PATH_TURN_ON_SH
         echo '  elif [ $(id -u) -ne 0 ]; then' >> $PATH_TURN_ON_SH
-        echo '      echo "使用ROOT用户登录才能启动KTPROXY"' >> $PATH_TURN_ON_SH
+        echo '      echo "使用ROOT用户登录才能启动GoMinerTool"' >> $PATH_TURN_ON_SH
         echo '  fi' >> $PATH_TURN_ON_SH
         echo 'fi' >> $PATH_TURN_ON_SH
 
@@ -232,7 +204,7 @@ installapp() {
         VERSION="$1"
     fi
     
-    colorEcho ${GREEN} "开始安装KTPROXY-V-${VERSION}"
+    colorEcho ${GREEN} "开始安装gominertool-V-${VERSION}"
 
     if [[ `command -v yum` ]];then
         colorEcho ${BLUE} "关闭防火墙"
@@ -281,8 +253,8 @@ installapp() {
 
     checkProcess "ktproxy"
     if [ $? -eq 1 ]; then
-        colorEcho ${RED} "发现正在运行的KTMinerProxy, 需要停止才可继续安装。"
-        colorEcho ${YELLOW} "输入1停止正在运行的KTMinerProxy并且继续安装, 输入2取消安装。"
+        colorEcho ${RED} "发现正在运行的GoMinerTool, 需要停止才可继续安装。"
+        colorEcho ${YELLOW} "输入1停止正在运行的GoMinerTool并且继续安装, 输入2取消安装。"
 
         read -p "$(echo -e "请选择[1-2]：")" choose
         case $choose in
@@ -379,12 +351,12 @@ check_limit() {
 check_hub() {
     # cd $PATH_KT
     colorEcho ${YELLOW} "按住CTRL+C后台运行"
-    tail -f /root/ktmproxy/nohup.out
+    tail -f /root/GoMinerTool/nohup.out
 }
 
 check_err() {
     colorEcho ${YELLOW} "按住CTRL+C后台运行"
-    tail -f /root/ktmproxy/err.log
+    tail -f /root/GoMinerTool/err.log
 }
 
 install_target() {
@@ -430,7 +402,7 @@ lookport() {
 }
 
 echo "-------------------------------------------------------"
-colorEcho ${GREEN} "欢迎使用KTMinerProxy安装工具, 请输入操作号继续。"
+colorEcho ${GREEN} "欢迎使用GoMinerProxy安装工具, 请输入操作号继续。"
 
 echo ""
 echo "1、安装"
