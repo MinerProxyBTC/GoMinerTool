@@ -423,9 +423,9 @@ ___
 >>## 算力呈现波浪状
 >>><img src="./image/t10.png" alt="Logo"><br>
 >>>
->>>如果出现上图中的情况, 说明您开启了多个相同端口的KTMinerproxy, 关闭多余的进程即可。
+>>>如果出现上图中的情况, 说明您开启了多个相同端口的GoMinerTool, 关闭多余的进程即可。
 >>>
->>>如果您进行了镜像拷贝，也会出现以上问题，先执行脚本停止程序的运行，然后删除掉/root/ktmproxy/license文件, 再执行启动即可
+>>>如果您进行了镜像拷贝，也会出现以上问题，先执行脚本停止程序的运行，然后删除掉/root/GoMinerTool/license文件, 再执行启动即可
 >><span id="q2"></span>
 >>## 负载均衡
 >>>等待更新
@@ -516,12 +516,12 @@ ___
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-[contributors-shield]: https://img.shields.io/github/contributors/kt007007/KTMinerProxy.svg?style=flat
-[contributors-url]: https://github.com/kt007007/KTMinerProxy/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/kt007007/KTMinerProxy.svg?style=flat
+[contributors-shield]: https://img.shields.io/github/contributors/GoMinerTool/GoMinerTool.svg?style=flat
+[contributors-url]: https://github.com/GoMinerTool/GoMinerTool/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/GoMinerTool/GoMinerTool.svg?style=flat
 [forks-url]: https://github.com/GoMinerTool/GoMinerTool/network/members
-[stars-shield]: https://img.shields.io/github/stars/kt007007/KTMinerProxy.svg?style=flat
-[stars-url]: https://github.com/kt007007/KTMinerProxy/stargazers
-[issues-shield]: https://img.shields.io/github/issues/kt007007/KTMinerProxy.svg?style=flat
-[issues-url]: https://github.com/kt007007/KTMinerProxy/issues
-[license-shield]: https://img.shields.io/github/license/kt007007/KTMinerProxy.svg?style=flat
+[stars-shield]: https://img.shields.io/github/stars/GoMinerTool/GoMinerTool.svg?style=flat
+[stars-url]: https://github.com/GoMinerTool/GoMinerTool/stargazers
+[issues-shield]: https://img.shields.io/github/issues/GoMinerTool/GoMinerTool.svg?style=flat
+[issues-url]: https://github.com/GoMinerTool/GoMinerTool/issues
+[license-shield]: https://img.shields.io/github/license/GoMinerTool/GoMinerTool.svg?style=flat
