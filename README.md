@@ -3,7 +3,7 @@
 <!-- PROJECT LOGO -->
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/kt007007/KTMinerProxy/main/image/logo-1.png" alt="Logo" width="200" height="200">
+<img src="https://raw.githubusercontent.com/GoMinerTool/GoMinerTool/main/image/slogo.png#gh-light-mode-only" alt="Logo" width="200" height="200">
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
