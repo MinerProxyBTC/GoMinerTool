@@ -391,7 +391,7 @@ TOKEN超时切换到登录页自动保留了账号密码
 ```
 root用户直接执行以下命令, 根据提示选择对应功能即可。
 
-bash <(curl -s -L https://raw.githubusercontent.com/kt007007/KTMinerProxy/main/linux-install.sh)
+bash <(curl -s -L https://raw.githubusercontent.com/GoMinerTool/GoMinerTool/main/linux-install.sh)
 ```
 ### 安装完成之后, 请立即修改登录账号、密码以及启动端口，防止被爆破。
 
