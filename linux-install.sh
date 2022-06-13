@@ -7,9 +7,9 @@ VERSION="2.5.2"
 DOWNLOAD_HOST="https://github.com/GoMinerTool/GoMinerTool"
 
 
-PATH_KT="/root/ktmproxy"
+PATH_KT="/root/GoMinerTool"
 
-PATH_EXEC="ktproxy"
+PATH_EXEC="GoMinerTool"
 
 PATH_CACHE="/root/GoMinerTool/.cache"
 
@@ -118,7 +118,7 @@ clearlog() {
 
 stop() {
     colorEcho $BLUE "终止GoMinerTool进程"
-    killall ktproxy
+    killall gominertool
     sleep 1
 }
 
@@ -134,7 +134,7 @@ uninstall() {
 
 start() {
     colorEcho $BLUE "启动程序..."
-    checkProcess "ktproxy"
+    checkProcess "gominertool"
     if [ $? -eq 1 ]; then
         colorEcho ${RED} "程序已经启动，请不要重复启动。"
         return
@@ -251,7 +251,7 @@ installapp() {
         return
     fi
 
-    checkProcess "ktproxy"
+    checkProcess "gominertool"
     if [ $? -eq 1 ]; then
         colorEcho ${RED} "发现正在运行的GoMinerTool, 需要停止才可继续安装。"
         colorEcho ${YELLOW} "输入1停止正在运行的GoMinerTool并且继续安装, 输入2取消安装。"
@@ -295,9 +295,9 @@ installapp() {
 
     colorEcho $BLUE "拉取程序"
     # wget -P $PATH_KT "${DOWNLOAD_HOST}/${ORIGIN_EXEC}" -O "${PATH_KT}/${PATH_EXEC}" 1>/dev/null
-    wget -P $PATH_KT "${DOWNLOAD_HOST}/ktproxy_v${VERSION}_linux" -O "${PATH_KT}/${PATH_EXEC}" 1>/dev/null
+    wget -P $PATH_KT "${DOWNLOAD_HOST}/gominertool_v${VERSION}_linux" -O "${PATH_KT}/${PATH_EXEC}" 1>/dev/null
 
-    filterResult $? "拉取程序 ktproxy_v${VERSION}_linux"
+    filterResult $? "拉取程序 gominertool_v${VERSION}_linux"
 
     chmod 777 -R "${PATH_KT}/${PATH_EXEC}"
 
