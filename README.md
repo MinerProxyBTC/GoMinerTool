@@ -9,7 +9,7 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-<!-- ![Github stars](https://img.shields.io/github/stars/kt007007/KTMinerProxy.svg) -->
+<!-- ![Github stars](https://img.shields.io/github/stars/GoMinerTool/GoMinerTool.svg) -->
 
 # GoMinerTool
 
