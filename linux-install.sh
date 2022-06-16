@@ -2,7 +2,7 @@
 # Author: GoMinerTool
 # github: https://github.com/GoMinerTool/GoMinerTool
 
-VERSION="2.5.2"
+VERSION="2.5.7"
 
 DOWNLOAD_HOST="https://github.com/GoMinerTool/GoMinerTool/raw/main/Linux-64"
 
@@ -26,6 +26,7 @@ PATH_TURN_ON_SH="/etc/profile.d/ktm.sh"
 
 ISSUE() {
     echo "2.5.2"
+    echo "2.5.7"
 }
 
 colorEcho(){
@@ -162,7 +163,7 @@ start() {
 update() {
     turn_off
 
-    installapp 2.5.2
+    installapp 2.5.7
 }
 
 turn_on() {
@@ -421,7 +422,7 @@ read -p "$(echo -e "请选择[1-14]：")" choose
 
 case $choose in
 1)
-    installapp 2.5.2
+    installapp 2.5.7
     ;;
 2)
     update
