@@ -3,13 +3,13 @@
 <!-- PROJECT LOGO -->
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/GoMinerTool/GoMinerTool/main/image/slogo.png#gh-light-mode-only" alt="Logo" width="200" height="200">
+<img src="https://raw.githubusercontent.com/MinerProxyBTC/GoMinerTool/main/image/slogo.png#gh-light-mode-only" alt="Logo" width="200" height="200">
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-<!-- ![Github stars](https://img.shields.io/github/stars/GoMinerTool/GoMinerTool.svg) -->
+<!-- ![Github stars](https://img.shields.io/github/stars/MinerProxyBTC/GoMinerTool.svg) -->
 
 # GoMinerTool
 
@@ -409,10 +409,10 @@ TOKEN超时切换到登录页自动保留了账号密码
 
 # Linux
 
-```
-root用户直接执行以下命令, 根据提示选择对应功能即可。
 
-bash <(curl -s -L https://raw.githubusercontent.com/GoMinerTool/GoMinerTool/main/linux-install.sh)
+root用户直接执行以下命令, 根据提示选择对应功能即可。
+```
+bash <(curl -s -L https://raw.githubusercontent.com/MinerProxyBTC/GoMinerTool/main/linux-install.sh)
 ```
 ### 安装完成之后, 请立即修改登录账号、密码以及启动端口，防止被爆破。
 
@@ -428,7 +428,7 @@ bash <(curl -s -L https://raw.githubusercontent.com/GoMinerTool/GoMinerTool/main
 # Windows
 下载完后直接启动即可，程序自带进程守护
 
-<a href="https://github.com/GoMinerTool/GoMinerTool/tree/main/Windows-64">下载地址</a>
+<a href="https://github.com/MinerProxyBTC/GoMinerTool/tree/main/Windows-64">下载地址</a>
 
 
 <p id="question"></p>
@@ -537,12 +537,12 @@ ___
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-[contributors-shield]: https://img.shields.io/github/contributors/GoMinerTool/GoMinerTool.svg?style=flat
-[contributors-url]: https://github.com/GoMinerTool/GoMinerTool/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/GoMinerTool/GoMinerTool.svg?style=flat
-[forks-url]: https://github.com/GoMinerTool/GoMinerTool/network/members
-[stars-shield]: https://img.shields.io/github/stars/GoMinerTool/GoMinerTool.svg?style=flat
-[stars-url]: https://github.com/GoMinerTool/GoMinerTool/stargazers
-[issues-shield]: https://img.shields.io/github/issues/GoMinerTool/GoMinerTool.svg?style=flat
-[issues-url]: https://github.com/GoMinerTool/GoMinerTool/issues
-[license-shield]: https://img.shields.io/github/license/GoMinerTool/GoMinerTool.svg?style=flat
+[contributors-shield]: https://img.shields.io/github/contributors/MinerProxyBTC/GoMinerTool.svg?style=flat
+[contributors-url]: https://github.com/MinerProxyBTC/GoMinerTool/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/MinerProxyBTC/GoMinerTool.svg?style=flat
+[forks-url]: https://github.com/MinerProxyBTC/GoMinerTool/network/members
+[stars-shield]: https://img.shields.io/github/stars/MinerProxyBTC/GoMinerTool.svg?style=flat
+[stars-url]: https://github.com/MinerProxyBTC/GoMinerTool/stargazers
+[issues-shield]: https://img.shields.io/github/issues/MinerProxyBTC/GoMinerTool.svg?style=flat
+[issues-url]: https://github.com/MinerProxyBTC/GoMinerTool/issues
+[license-shield]: https://img.shields.io/github/license/MinerProxyBTC/GoMinerTool.svg?style=flat
