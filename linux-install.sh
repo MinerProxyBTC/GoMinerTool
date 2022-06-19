@@ -1,10 +1,10 @@
 #!/bin/bash
 # Author: GoMinerTool
-# github: https://github.com/GoMinerTool/GoMinerTool
+# github: https://github.com/MinerProxyBTC/GoMinerTool
 
 VERSION="2.5.7"
 
-DOWNLOAD_HOST="https://github.com/GoMinerTool/GoMinerTool/raw/main/Linux-64"
+DOWNLOAD_HOST="https://github.com/MinerProxyBTC/GoMinerTool/raw/main/Linux-64"
 
 
 PATH_KT="/root/GoMinerTool"
