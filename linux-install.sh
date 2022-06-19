@@ -1,5 +1,5 @@
 #!/bin/bash
-# Author: GoMinerTool
+# Author: MinerProxyBTC
 # github: https://github.com/MinerProxyBTC/GoMinerTool
 
 VERSION="2.5.7"
