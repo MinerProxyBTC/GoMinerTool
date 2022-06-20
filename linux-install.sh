@@ -2,7 +2,7 @@
 # Author: MinerProxyBTC
 # github: https://github.com/MinerProxyBTC/GoMinerTool
 
-VERSION="2.5.7"
+VERSION="2.6.2"
 
 DOWNLOAD_HOST="https://github.com/MinerProxyBTC/GoMinerTool/raw/main/Linux-64"
 
@@ -27,6 +27,7 @@ PATH_TURN_ON_SH="/etc/profile.d/ktm.sh"
 ISSUE() {
     echo "2.5.2"
     echo "2.5.7"
+    echo "2.6.2"
 }
 
 colorEcho(){
@@ -163,7 +164,7 @@ start() {
 update() {
     turn_off
 
-    installapp 2.5.7
+    installapp 2.6.2
 }
 
 turn_on() {
@@ -422,7 +423,7 @@ read -p "$(echo -e "请选择[1-14]：")" choose
 
 case $choose in
 1)
-    installapp 2.5.7
+    installapp 2.6.2
     ;;
 2)
     update
