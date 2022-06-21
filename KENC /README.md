@@ -8,9 +8,9 @@
 
 ### KENC是本地->远程隧道，局域网部署在一台设备上即可，可与远程GoMinerTool通过KENC协议进行通信。
 
-<a href="https://github.com/GoMinerTool/GoMinerTool/raw/main/KENC/windows.zip">点击下载WINDOWS客户端</a>
+<a href="https://github.com/MinerProxyBTC/GoMinerTool/raw/main/KENC/windows.zip">点击下载WINDOWS客户端</a>
 
-<a href="https://github.com/GoMinerTool/GoMinerTool/raw/main/KENC/kenc_v_linux">点击下载LINUX客户端</a>
+<a href="https://github.com/MinerProxyBTC/GoMinerTool/raw/main/KENC/kenc_v_linux">点击下载LINUX客户端</a>
 
 ### 使用环境
 ```
