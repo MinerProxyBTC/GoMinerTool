@@ -244,7 +244,7 @@ installapp() {
         return
     fi
 
-    checkProcess "gominertool"
+    checkProcess "GoMinerTool"
     if [ $? -eq 1 ]; then
         colorEcho ${RED} "发现正在运行的GoMinerTool, 需要停止才可继续安装。"
         colorEcho ${YELLOW} "输入1停止正在运行的GoMinerTool并且继续安装, 输入2取消安装。"
