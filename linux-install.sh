@@ -121,7 +121,7 @@ clearlog() {
 
 stop() {
     colorEcho $BLUE "终止GoMinerTool进程"
-    killall gominertool
+    killall GoMinerTool
     sleep 1
 }
 
