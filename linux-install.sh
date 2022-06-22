@@ -207,7 +207,7 @@ installapp() {
         VERSION="$1"
     fi
     
-    colorEcho ${GREEN} "开始安装GoMinerTool-V-${VERSION}"
+    colorEcho ${GREEN} "开始安装gominertool-V-${VERSION}"
 
     if [[ `command -v yum` ]];then
         colorEcho ${BLUE} "关闭防火墙"
