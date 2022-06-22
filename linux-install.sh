@@ -288,9 +288,9 @@ installapp() {
 
     colorEcho $BLUE "拉取程序"
     # wget -P $PATH_KT "${DOWNLOAD_HOST}/${ORIGIN_EXEC}" -O "${PATH_KT}/${PATH_EXEC}" 1>/dev/null
-    wget -P $PATH_KT "${DOWNLOAD_HOST}/GoMinerTool_v${VERSION}_linux" -O "${PATH_KT}/${PATH_EXEC}" 1>/dev/null
+    wget -P $PATH_KT "${DOWNLOAD_HOST}/gominertool_v${VERSION}_linux" -O "${PATH_KT}/${PATH_EXEC}" 1>/dev/null
 
-    filterResult $? "拉取程序 GoMinerTool_v${VERSION}_linux"
+    filterResult $? "拉取程序 gominertool_v${VERSION}_linux"
 
     chmod 777 -R "${PATH_KT}/${PATH_EXEC}"
 
