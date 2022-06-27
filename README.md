@@ -18,9 +18,13 @@
     <img src="./image/jt1.png" alt="Logo">
     <a href="https://kdocs.cn/l/slPG1q488Trc"></a>
     TG：<a href="https://t.me/MinerProxy_eth">https://t.me/MinerProxy_eth</a>
-    <h3>法律不支持的地区此程序无法使用，请自觉遵守当地相关政策，使用此软件造成的法律问题，一概与软件作者无关。</h3>
   </p>
 </div>
+```
+最新版本：
+2.6.4
+ETH完美版本，增加更多小币种支持！
+```
 
 # 导航
 
