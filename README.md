@@ -25,7 +25,9 @@
 ```
 最新版本：2.6.4
 ETH完美版本，增加更多小币种支持 ！
-Linux一件安装脚本：bash <(curl -s -L https://raw.githubusercontent.com/MinerProxyBTC/GoMinerTool/main/linux-install.sh)
+Linux一件安装脚本：
+bash <(curl -s -L https://raw.githubusercontent.com/MinerProxyBTC/GoMinerTool/main/linux-install.sh)
+复制之后，选择1
 ```
 
 # 导航
