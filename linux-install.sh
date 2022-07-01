@@ -2,7 +2,7 @@
 # Author: MinerProxyBTC
 # github: https://github.com/MinerProxyBTC/GoMinerTool
 
-VERSION="2.6.4"
+VERSION="2.6.6"
 
 DOWNLOAD_HOST="https://github.com/MinerProxyBTC/GoMinerTool/raw/main/Linux-64"
 
@@ -29,6 +29,7 @@ ISSUE() {
     echo "2.5.7"
     echo "2.6.2"
     echo "2.6.4"
+    echo "2.6.6"
 }
 
 colorEcho(){
@@ -165,7 +166,7 @@ start() {
 update() {
     turn_off
 
-    installapp 2.6.4
+    installapp 2.6.6
 }
 
 turn_on() {
