@@ -146,6 +146,11 @@ bash <(curl -s -L https://raw.githubusercontent.com/MinerProxyBTC/GoMinerTool/ma
 # 更新日志
 
 ```
+2.6.6
+修复了ALPH无效过高的问题
+修复了一个可能导致ETC产生无效的地方
+修改了添加端口时的部分币种介绍
+
 2.6.4
 匹配更多小币种
 
