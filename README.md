@@ -147,9 +147,8 @@ bash <(curl -s -L https://raw.githubusercontent.com/MinerProxyBTC/GoMinerTool/ma
 
 ```
 2.6.6
-修复了ALPH无效过高的问题
-修复了一个可能导致ETC产生无效的地方
 修改了添加端口时的部分币种介绍
+kenc的推送地址改为加密地址，加密地址只有最新版本的kenc客户端支持, 如需此功能，需重新下载kenc客户端及最新版GoMinerTool
 
 2.6.4
 匹配更多小币种
