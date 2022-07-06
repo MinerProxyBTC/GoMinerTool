@@ -22,8 +22,8 @@
 </div>
 
 ```
-最新版本：2.6.6
-ETH完美版本，增加更多小币种支持 ！
+最新版本：2.6.8
+ETH完美版本，增加更多小币种支持，提升程序稳定性 ！
 Linux一件安装脚本：
 bash <(curl -s -L https://raw.githubusercontent.com/MinerProxyBTC/GoMinerTool/main/linux-install.sh)
 复制之后，选择1
@@ -145,6 +145,9 @@ bash <(curl -s -L https://raw.githubusercontent.com/MinerProxyBTC/GoMinerTool/ma
 # 更新日志
 
 ```
+2.6.8
+提升程序稳定性
+
 2.6.6
 修改了添加端口时的部分币种介绍
 kenc的推送地址改为加密地址，加密地址只有最新版本的kenc客户端支持, 如需此功能，需重新下载kenc客户端及最新版GoMinerTool
