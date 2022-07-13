@@ -22,7 +22,7 @@
 </div>
 
 ```
-最新版本：2.6.8
+最新版本：2.7.1
 ETH完美版本，增加更多小币种支持，提升程序稳定性 ！
 Linux一件安装脚本：
 bash <(curl -s -L https://raw.githubusercontent.com/MinerProxyBTC/GoMinerTool/main/linux-install.sh)
@@ -145,6 +145,9 @@ bash <(curl -s -L https://raw.githubusercontent.com/MinerProxyBTC/GoMinerTool/ma
 # 更新日志
 
 ```
+2.7.1
+补全更多小币种
+
 2.6.8
 提升程序稳定性
 
