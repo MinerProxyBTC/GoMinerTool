@@ -24,6 +24,7 @@
 ```
 最新版本：2.7.1
 ETH完美版本，增加更多小币种支持，提升程序稳定性 ！
+芯动A11同池抽水出现高无效的，请降级或升级固件至“a11_20211026_060307”版本、mx需要降级或升级至“a11mx_20211220_124402” 版本。
 Linux一件安装脚本：
 bash <(curl -s -L https://raw.githubusercontent.com/MinerProxyBTC/GoMinerTool/main/linux-install.sh)
 复制之后，选择1
