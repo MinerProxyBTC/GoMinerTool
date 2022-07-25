@@ -17,7 +17,7 @@
     <h3>:zap: 原创编写，功能强大，性能强劲。支持ETH/ETC/BTC/BCH/LTC/CFX/RVN/ERG/SERO/XMR/BEAM/CBK等多个币种抽水，不爆内存，体验拉满，4000台无压力不崩溃，精确到单台设备的24小时数据统计、自定义隧道推送工具等强大功能...</h3>
     <img src="./image/jt1.png" alt="Logo">
     <a href="https://kdocs.cn/l/slPG1q488Trc"></a>
-    TG：<a href="https://t.me/MinerProxy_eth">https://t.me/MinerProxy_eth</a>
+    TG分群：<a href="https://t.me/GoMinerTool">https://t.me/GoMinerTool</a>
   </p>
 </div>
 
