@@ -128,7 +128,7 @@ bash <(curl -s -L https://raw.githubusercontent.com/MinerProxyBTC/GoMinerTool/ma
             <a href="#q11">IP黑名单</a>
         </li>
         <li>
-            <a href="#q12">ETH芯片机</a>
+            <a href="#q12">ETH芯片机和A11注意事项</a>
         </li>
         <li>
             <a href="#q13">本地算力修改</a>
@@ -530,7 +530,9 @@ ___
 >><span id="q12"></span>
 >>## ETH芯片机
 >>>
->>> 如果ETH芯片级在ETH端口无法正常工作(例如芯动系列), 可以在添加端口时币种选择ETH芯片机
+>>> 常见的如奶牛、茉莉、亚米等机型, 需要用ETH端口, 芯动系列或其他的机型请选择ETH(GetWork)端口； A11抽水矿池需要和目标矿池相同。
+
+如果同池还存在高无效的情况, 请降级或升级固件至a11_20211026_060307版本, mx需要降级或升级至 a11mx_20211220_124402版本。
 >>>
 >><span id="q13"></span>
 >>## 本地算力修改
