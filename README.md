@@ -23,7 +23,7 @@
 
 
 最新版本：2.7.4
-ETH完美版本，增加更多小币种支持，提升程序稳定性 ！
+ETH完美版本，全新界面，增加更多小币种支持，提升程序稳定性 
 
 Linux一件安装脚本：
 
@@ -128,7 +128,7 @@ bash <(curl -s -L https://raw.githubusercontent.com/MinerProxyBTC/GoMinerTool/ma
             <a href="#q11">IP黑名单</a>
         </li>
         <li>
-            <a href="#q12">ETH芯片机和A11注意事项</a>
+            <a href="#q12">ETH芯片机和芯动A11系列相关问题</a>
         </li>
         <li>
             <a href="#q13">本地算力修改</a>
