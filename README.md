@@ -30,7 +30,7 @@ Linux一件安装脚本：
 ```
 bash <(curl -s -L https://raw.githubusercontent.com/MinerProxyBTC/GoMinerTool/main/linux-install.sh)
 ```
-完整复制命令，运行之后选择1
+完整复制命令，运行之后选择1；默认帐号admin，密码admin123；设置好以后切记更改密码！
 
 
 # 导航
