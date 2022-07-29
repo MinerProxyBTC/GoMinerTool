@@ -34,10 +34,10 @@ bash <(curl -s -L https://raw.githubusercontent.com/MinerProxyBTC/GoMinerTool/ma
 
 <ol>
 <li>
-    <a href="#uplog">更新日志</a>
+    <a href="#preview">软件预览</a>
 </li>
 <li>
-    <a href="#preview">软件预览</a>
+    <a href="#uplog">更新日志</a>
 </li>
 <li>
     <a href="#install">安装软件</a>
