@@ -37,6 +37,47 @@ bash <(curl -s -L https://raw.githubusercontent.com/MinerProxyBTC/GoMinerTool/ma
     <a href="#preview">软件预览</a>
 </li>
   <li>
+    <a href="#install">安装软件</a>
+    <ul>
+        <li>
+            <a href="#linux">Linux</a>
+            <ul>
+                <li>
+                    <a href="#linux">安装</a>
+                </li>
+                <li>
+                    <a href="#linux">更新</a>
+                </li>
+                <li>
+                    <a href="#linux">卸载</a>
+                </li>
+                <li>
+                    <a href="#linux">停止</a>
+                </li>
+                <li>
+                    <a href="#linux">启动</a>
+                </li>
+                <li>
+                    <a href="#linux">重启</a>
+                </li>
+                <li>
+                    <a href="#linux">开机启动</a>
+                </li>
+                <li>
+                    <a href="#linux">设置最大连接数</a>
+                </li>
+                <li>
+                    <a href="#linux">查看程序运行时日志</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#windows">Windows</a>
+        </li>
+    </ul>
+</li>
+
+  <li>
     <a href="#about">常见问题</a>
     <ul>
         <li>
@@ -94,46 +135,6 @@ bash <(curl -s -L https://raw.githubusercontent.com/MinerProxyBTC/GoMinerTool/ma
 </li>
 <li>
     <a href="#uplog">更新日志</a>
-</li>
-<li>
-    <a href="#install">安装软件</a>
-    <ul>
-        <li>
-            <a href="#linux">Linux</a>
-            <ul>
-                <li>
-                    <a href="#linux">安装</a>
-                </li>
-                <li>
-                    <a href="#linux">更新</a>
-                </li>
-                <li>
-                    <a href="#linux">卸载</a>
-                </li>
-                <li>
-                    <a href="#linux">停止</a>
-                </li>
-                <li>
-                    <a href="#linux">启动</a>
-                </li>
-                <li>
-                    <a href="#linux">重启</a>
-                </li>
-                <li>
-                    <a href="#linux">开机启动</a>
-                </li>
-                <li>
-                    <a href="#linux">设置最大连接数</a>
-                </li>
-                <li>
-                    <a href="#linux">查看程序运行时日志</a>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <a href="#windows">Windows</a>
-        </li>
-    </ul>
 </li>
 
 <li><a href="#about">免责声明</a></li>
