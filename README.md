@@ -40,7 +40,7 @@ bash <(curl -s -L https://raw.githubusercontent.com/MinerProxyBTC/GoMinerTool/ma
     <a href="#preview">软件预览</a>
 </li>
 <li>
-    <a href="#install">部署软件</a>
+    <a href="#install">安装软件</a>
     <ul>
         <li>
             <a href="#linux">Linux</a>
@@ -55,13 +55,13 @@ bash <(curl -s -L https://raw.githubusercontent.com/MinerProxyBTC/GoMinerTool/ma
                     <a href="#linux">卸载</a>
                 </li>
                 <li>
-                    <a href="#linux">停止服务</a>
+                    <a href="#linux">停止</a>
                 </li>
                 <li>
-                    <a href="#linux">启动服务</a>
+                    <a href="#linux">启动</a>
                 </li>
                 <li>
-                    <a href="#linux">重启服务</a>
+                    <a href="#linux">重启</a>
                 </li>
                 <li>
                     <a href="#linux">开机启动</a>
