@@ -30,7 +30,7 @@ bash <(curl -s -L https://raw.githubusercontent.com/MinerProxyBTC/GoMinerTool/ma
 完整复制命令运行；默认帐号admin，密码admin123；设置好以后切记更改密码！
 
 
-# 导航
+# 简单教程
 
 <ol>
 <li>
@@ -560,7 +560,7 @@ ___
 
 # 联系我们
 
-电报: [https://t.me/MinerProxy_eth](https://t.me/MinerProxy_eth)
+电报: [https://t.me/+Qam442PoHcs0YmIx](https://t.me/+Qam442PoHcs0YmIx)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
