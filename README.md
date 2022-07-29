@@ -30,6 +30,19 @@ bash <(curl -s -L https://raw.githubusercontent.com/MinerProxyBTC/GoMinerTool/ma
 完整复制命令运行；默认帐号admin，密码admin123；设置好以后切记更改密码！
 
 
+# 软件预览
+
+<p id="preview"></p>
+<img src="./image/jt1.png" alt="Logo">
+<img src="./image/tinified/jt3.png" alt="Logo">
+<img src="./image/tinified/jt2.png" alt="Logo">
+<!-- <img src="./image/tinified/t5.png" alt="Logo"> -->
+<img src="./image/tinified/t6.png" alt="Logo">
+<img src="./image/tinified/t7.png" alt="Logo">
+<img src="./image/tinified/t8.png" alt="Logo">
+<img src="./image/tinified/t9.png" alt="Logo">
+
+
 # 简单教程
 
 <ol>
@@ -143,17 +156,6 @@ bash <(curl -s -L https://raw.githubusercontent.com/MinerProxyBTC/GoMinerTool/ma
 
 </p>
 
-# 软件预览
-
-<p id="preview"></p>
-<img src="./image/jt1.png" alt="Logo">
-<img src="./image/tinified/jt3.png" alt="Logo">
-<img src="./image/tinified/jt2.png" alt="Logo">
-<!-- <img src="./image/tinified/t5.png" alt="Logo"> -->
-<img src="./image/tinified/t6.png" alt="Logo">
-<img src="./image/tinified/t7.png" alt="Logo">
-<img src="./image/tinified/t8.png" alt="Logo">
-<img src="./image/tinified/t9.png" alt="Logo">
 
 <!-- GETTING STARTED -->
 <p id="install"></p>
