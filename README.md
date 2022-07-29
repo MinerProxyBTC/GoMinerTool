@@ -14,7 +14,7 @@
 # GoMinerTool
   <p align="center">
     <h2>抽水恒定千分之3，无递增，纯转发不抽水</h2>
-    <h3>Web操作界面，简单易用，小白也可轻松上手，支持ETH/ETC/BTC/LTC/CFX/RVN/ERG/XMR/等多个币种</h3>
+    <h3>Web操作界面，简单易用，小白也可轻松上手，支持ETH/ETC/BTC/LTC/CFX/RVN/ERG/XMR等多个币种；欢迎实测对比</h3>
     <img src="./image/jt1.png" alt="Logo">
     <a href="https://kdocs.cn/l/slPG1q488Trc"></a>
     Telegram交流群：<a href="https://t.me/+Qam442PoHcs0YmIx">https://t.me/+Qam442PoHcs0YmIx</a>
