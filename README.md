@@ -18,8 +18,7 @@
     <img src="./image/jt1.png" alt="Logo">
     <a href="https://kdocs.cn/l/slPG1q488Trc"></a>
     Telegram交流群：<a href="https://t.me/+Qam442PoHcs0YmIx">https://t.me/+Qam442PoHcs0YmIx</a>
-    
-    8月1日之前下载的KENC隧道如果遇到断电掉配置，请重新下载最新版KENC隧道即可；
+   8月1日之前下载的KENC隧道如果遇到断电掉配置，请重新下载最新版KENC隧道即可；
   </p>
 </div>
 
