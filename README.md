@@ -18,8 +18,6 @@
     <img src="./image/jt1.png" alt="Logo">
     <a href="https://kdocs.cn/l/slPG1q488Trc"></a>
     Telegram交流群：<a href="https://t.me/+Qam442PoHcs0YmIx">https://t.me/+Qam442PoHcs0YmIx</a>
-   
-   8月1日之前下载的KENC隧道如果遇到断电掉配置，请重新下载最新版KENC隧道即可；
   </p>
 </div>
 
@@ -32,6 +30,7 @@ bash <(curl -s -L https://raw.githubusercontent.com/MinerProxyBTC/GoMinerTool/ma
 ```
 完整复制命令运行；默认帐号admin，密码admin123；设置好以后切记更改密码！
 
+8月1日之前下载的KENC隧道如果遇到断电掉配置，请重新下载最新版KENC隧道即可
 
 # 软件预览
 
