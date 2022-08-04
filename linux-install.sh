@@ -401,7 +401,7 @@ lookport() {
 }
 
 echo "-------------------------------------------------------"
-colorEcho ${GREEN} "欢迎使用GoMinerProxy安装工具, 请输入操作号继续。"
+colorEcho ${GREEN} "欢迎使用GoMinerTool安装工具, 请输入操作号继续。"
 
 echo ""
 echo "1、安装"
