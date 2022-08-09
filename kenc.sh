@@ -411,7 +411,7 @@ read -p "$(echo -e "请选择[1-6]：")" choose
 
 case $choose in
 1)
-    installapp 1.0.0
+    installapp 1.1.2
     ;;
 2)
     uninstall
