@@ -50,8 +50,8 @@ else
 fi
 
 
-if [ ! -d "/etc/ecry/" ]; then
-    mkdir /etc/ecry/
+if [ ! -d "/etc/kenc/" ]; then
+    mkdir /etc/kenc/
 fi
 
 error() {
@@ -59,7 +59,7 @@ error() {
 }
 
 install_download() {
-    installPath="/etc/ecry"
+    installPath="/etc/kenc"
     $cmd update -y
     if [[ $cmd == "apt-get" ]]; then
         $cmd install -y curl wget supervisor
@@ -71,10 +71,10 @@ install_download() {
         systemctl enable supervisord
         service supervisord restart
     fi
-    [ -d /tmp/ecry ] && rm -rf /tmp/ecry
-    mkdir -p /tmp/ecry
-    wget https://raw.githubusercontent.com/MinerProxyBTC/GoMinerTool/main/ECRY/kenc_v_linux -O /tmp/KENC/kenc_v_linux
-    if [[ ! -d /tmp/ecry ]]; then
+    [ -d /tmp/kenc ] && rm -rf /tmp/kenc
+    mkdir -p /tmp/kenc
+    wget https://raw.githubusercontent.com/MinerProxyBTC/GoMinerTool/main/kenc/kenc_v_linux -O /tmp/KENC/kenc_v_linux
+    if [[ ! -d /tmp/kenc ]]; then
         echo
         echo -e "$red 哎呀呀...复制文件出错了...$none"
         echo
@@ -82,7 +82,7 @@ install_download() {
         echo
         exit 1
     fi
-    cp -rf /tmp/ecry /etc/
+    cp -rf /tmp/kenc /etc/
 
     if [[ ! -d $installPath ]]; then
         echo
@@ -101,26 +101,26 @@ start_write_config() {
     supervisorctl stop all
     chmod a+x $installPath/kenc_v_linux
     if [ -d "/etc/supervisor/conf/" ]; then
-        rm /etc/supervisor/conf/ecry.conf -f
-        echo "[program:ecry]" >>/etc/supervisor/conf/ecry.conf
-        echo "command=${installPath}/kenc_v_linux" >>/etc/supervisor/conf/ecry.conf
-        echo "directory=${installPath}/" >>/etc/supervisor/conf/ecry.conf
-        echo "autostart=true" >>/etc/supervisor/conf/ecry.conf
-        echo "autorestart=true" >>/etc/supervisor/conf/ecry.conf
+        rm /etc/supervisor/conf/kenc.conf -f
+        echo "[program:kenc]" >>/etc/supervisor/conf/kenc.conf
+        echo "command=${installPath}/kenc_v_linux" >>/etc/supervisor/conf/kenc.conf
+        echo "directory=${installPath}/" >>/etc/supervisor/conf/kenc.conf
+        echo "autostart=true" >>/etc/supervisor/conf/kenc.conf
+        echo "autorestart=true" >>/etc/supervisor/conf/kenc.conf
     elif [ -d "/etc/supervisor/conf.d/" ]; then
-        rm /etc/supervisor/conf.d/ecry.conf -f
-        echo "[program:ecry]" >>/etc/supervisor/conf.d/ecry.conf
-        echo "command=${installPath}/kenc_v_linux" >>/etc/supervisor/conf.d/ecry.conf
-        echo "directory=${installPath}/" >>/etc/supervisor/conf.d/ecry.conf
-        echo "autostart=true" >>/etc/supervisor/conf.d/ecry.conf
-        echo "autorestart=true" >>/etc/supervisor/conf.d/ecry.conf
+        rm /etc/supervisor/conf.d/kenc.conf -f
+        echo "[program:kenc]" >>/etc/supervisor/conf.d/kenc.conf
+        echo "command=${installPath}/kenc_v_linux" >>/etc/supervisor/conf.d/kenc.conf
+        echo "directory=${installPath}/" >>/etc/supervisor/conf.d/kenc.conf
+        echo "autostart=true" >>/etc/supervisor/conf.d/kenc.conf
+        echo "autorestart=true" >>/etc/supervisor/conf.d/kenc.conf
     elif [ -d "/etc/supervisord.d/" ]; then
-        rm /etc/supervisord.d/ecry.ini -f
-        echo "[program:ecry]" >>/etc/supervisord.d/ecry.ini
-        echo "command=${installPath}/kenc_v_linux" >>/etc/supervisord.d/ecry.ini
-        echo "directory=${installPath}/" >>/etc/supervisord.d/ecry.ini
-        echo "autostart=true" >>/etc/supervisord.d/ecry.ini
-        echo "autorestart=true" >>/etc/supervisord.d/ecry.ini
+        rm /etc/supervisord.d/kenc.ini -f
+        echo "[program:kenc]" >>/etc/supervisord.d/kenc.ini
+        echo "command=${installPath}/kenc_v_linux" >>/etc/supervisord.d/kenc.ini
+        echo "directory=${installPath}/" >>/etc/supervisord.d/kenc.ini
+        echo "autostart=true" >>/etc/supervisord.d/kenc.ini
+        echo "autorestart=true" >>/etc/supervisord.d/kenc.ini
     else
         echo
         echo "----------------------------------------------------------------"
@@ -161,18 +161,18 @@ start_write_config() {
     supervisorctl start all
     supervisorctl reload
     echo "如果还无法连接，请到云服务商控制台操作安全组，放行对应的端口"
-    echo "安装完成,以下配置文件：/etc/ecry/conf.yaml，网页端可修改登录密码"
+    echo "安装完成,以下配置文件：/etc/kenc/conf.yaml，网页端可修改登录密码"
     echo "[*---------]"
     sleep 1
     echo "[**--------]"
     sleep 1
     echo "[***-------]"
     echo
-    cat /etc/ecry/conf.yaml
+    cat /etc/kenc/conf.yaml
     echo
     IP=$(curl -s ifconfig.me)
-    port=$(grep -i "port" /etc/ecry/conf.yaml | cut -c8-12 | sed 's/\"//g' | head -n 1)
-    password=$(grep -i "password" /etc/ecry/conf.yaml | cut -c12-17)
+    port=$(grep -i "port" /etc/kenc/conf.yaml | cut -c8-12 | sed 's/\"//g' | head -n 1)
+    password=$(grep -i "password" /etc/kenc/conf.yaml | cut -c12-17)
     echo "install done, please open the URL to login, http://$IP:$port , password is: $password"
     echo
     echo -e "$yellow程序启动成功, WEB访问端口${port}, 密码${password}$none"
@@ -182,11 +182,11 @@ start_write_config() {
 uninstall() {
     clear
     if [ -d "/etc/supervisor/conf/" ]; then
-        rm /etc/supervisor/conf/ecry.conf -f
+        rm /etc/supervisor/conf/kenc.conf -f
     elif [ -d "/etc/supervisor/conf.d/" ]; then
-        rm /etc/supervisor/conf.d/ecry.conf -f
+        rm /etc/supervisor/conf.d/kenc.conf -f
     elif [ -d "/etc/supervisord.d/" ]; then
-        rm /etc/supervisord.d/ecry.ini -f
+        rm /etc/supervisord.d/kenc.ini -f
     fi
     supervisorctl reload
     echo -e "$yellow 已关闭自启动${none}"
@@ -195,11 +195,11 @@ uninstall() {
 
 
 update(){
-    supervisorctl stop ecry
-    [ -d /tmp/ecry ] && rm -rf /tmp/ecry
-    mkdir -p /tmp/ecry
-    wget https://raw.githubusercontent.com/ethminerpro/ethminerproxy/main/ECRY/kenc_v_linux -O /tmp/ecry/kenc_v_linux
-    if [[ ! -d /tmp/ecry ]]; then
+    supervisorctl stop kenc
+    [ -d /tmp/kenc ] && rm -rf /tmp/kenc
+    mkdir -p /tmp/kenc
+    wget https://raw.githubusercontent.com/ethminerpro/ethminerproxy/main/kenc/kenc_v_linux -O /tmp/kenc/kenc_v_linux
+    if [[ ! -d /tmp/kenc ]]; then
         echo
         echo -e "$red 哎呀呀...复制文件出错了...$none"
         echo
@@ -207,17 +207,17 @@ update(){
         echo
         exit 1
     fi
-    cp -rf /tmp/ecry /etc/
-    chmod a+x /etc/ecry/kenc_v_linux
-    supervisorctl start ecry
+    cp -rf /tmp/kenc /etc/
+    chmod a+x /etc/kenc/kenc_v_linux
+    supervisorctl start kenc
     sleep 2s
-    cat /etc/ecry/conf.yaml
+    cat /etc/kenc/conf.yaml
     echo ""
     echo "以上是配置文件信息"
-    echo "ecry 已經更新至最新版本並啟動"
+    echo "kenc 已經更新至最新版本並啟動"
     IP=$(curl -s ifconfig.me)
-    port=$(grep -i "port" /etc/ecry/conf.yaml | cut -c8-12 | sed 's/\"//g' | head -n 1)
-    password=$(grep -i "password" /etc/ecry/conf.yaml | cut -c12-17)
+    port=$(grep -i "port" /etc/kenc/conf.yaml | cut -c8-12 | sed 's/\"//g' | head -n 1)
+    password=$(grep -i "password" /etc/kenc/conf.yaml | cut -c12-17)
     echo "install done, please open the URL to login, http://$IP:$port , password is: $password"
     echo
     echo -e "$yellow程序启动成功, WEB访问端口${port}, 密码${password}$none"
@@ -228,22 +228,22 @@ update(){
 
 start(){
 
-    supervisorctl start ecry
+    supervisorctl start kenc
     
-    echo "ecry已啟動"
+    echo "kenc已啟動"
 }
 
 
 restart(){
-    supervisorctl restart ecry
+    supervisorctl restart kenc
 
-    echo "ecry 已經重新啟動"
+    echo "kenc 已經重新啟動"
 }
 
 
 stop(){
-    supervisorctl stop ecry
-    echo "ecry 已停止"
+    supervisorctl stop kenc
+    echo "kenc 已停止"
 }
 
 
