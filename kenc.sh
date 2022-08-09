@@ -22,7 +22,7 @@ PATH_TURN_ON="/etc/profile.d"
 PATH_TURN_ON_SH="/etc/profile.d/kenc.sh"
 
 ISSUE() {
-    echo "1.1.2.1"
+    echo "1.1.2"
     echo "1.1.5"
     echo "2.0.1"
     echo "2.1.0"
