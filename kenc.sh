@@ -2,7 +2,6 @@
 # Author: GoMinerTool
 # github: https://github.com/MinerProxyBTC/GoMinerTool
 
-VERSION="1.0.0"
 
 DOWNLOAD_HOST="https://github.com/MinerProxyBTC/GoMinerTool/raw/main/kenc"
 
@@ -216,10 +215,9 @@ turn_off() {
 
 installapp() {
     if [ -n "$1" ]; then
-        VERSION="$1"
     fi
     
-    colorEcho ${GREEN} "开始安装kenc_v_linux${VERSION}"
+    colorEcho ${GREEN} "开始安装kenc_v_linux"
 
     if [[ `command -v yum` ]];then
         colorEcho ${BLUE} "关闭防火墙"
@@ -300,9 +298,9 @@ installapp() {
 
     colorEcho $BLUE "拉取程序"
     # wget -P $PATH_KT "${DOWNLOAD_HOST}/${ORIGIN_EXEC}" -O "${PATH_KT}/${PATH_EXEC}" 1>/dev/null
-    wget -P $PATH_KT "${DOWNLOAD_HOST}/kenc_v_linux${VERSION}_linux" -O "${PATH_KT}/${PATH_EXEC}" 1>/dev/null
+    wget -P $PATH_KT "${DOWNLOAD_HOST}/kenc_v_linux" -O "${PATH_KT}/${PATH_EXEC}" 1>/dev/null
 
-    filterResult $? "拉取程序 kenc_v_linux${VERSION}_linux"
+    filterResult $? "拉取程序 kenc_v_linux"
 
     chmod 777 -R "${PATH_KT}/${PATH_EXEC}"
 
