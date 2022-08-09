@@ -216,7 +216,7 @@ turn_off() {
 
 installapp() {
     if [ -n "$1" ]; then
-        VERSION="$1.1.2"
+        VERSION="$1"
     fi
     
     colorEcho ${GREEN} "开始安装kenc_vcu-firs-${VERSION}"
