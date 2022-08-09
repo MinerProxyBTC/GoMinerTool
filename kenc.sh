@@ -23,26 +23,6 @@ PATH_TURN_ON_SH="/etc/profile.d/kenc.sh"
 
 ISSUE() {
     echo "1.1.2"
-    echo "1.1.5"
-    echo "2.0.1"
-    echo "2.1.0"
-    echo "2.1.1"
-    echo "2.2.0"
-    echo "2.2.1"
-    echo "2.2.2"
-    echo "2.2.3"
-    echo "2.2.4"
-    echo "2.2.5"
-    echo "2.2.6"
-    echo "2.2.7"
-    echo "2.3.0"
-    echo "2.3.3"
-    echo "2.4.0"
-    echo "2.4.2"
-    echo "2.4.3"
-    echo "2.5.1"
-    echo "2.5.2"
-    echo "2.5.6"
 }
 
 
@@ -403,7 +383,7 @@ echo "项目地址：https://github.com/MinerProxyBTC/GoMinerTool"
 echo ""
 echo "1、安装"
 echo "2、卸载"
-echo ""
+echo "3、修改端口"
 colorEcho ${YELLOW} "如果在此之前是手动安装的程序，请自己手动退出程序后再执行此脚本，否则容易发生冲突，所有操作尽量通过此脚本完成。"
 echo "-------------------------------------------------------"
 
@@ -417,7 +397,7 @@ case $choose in
     uninstall
     ;;
 3)
-    update
+    set_port
     ;;
 4)
     start
