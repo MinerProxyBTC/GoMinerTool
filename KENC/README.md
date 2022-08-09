@@ -1,6 +1,6 @@
 <div align="center">
 
-# KENC文档说明
+# 本地加密隧道文档说明
 
 </div>
 
