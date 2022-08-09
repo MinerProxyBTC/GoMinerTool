@@ -21,6 +21,30 @@ PATH_ERR="/root/kenc/err.log"
 PATH_TURN_ON="/etc/profile.d"
 PATH_TURN_ON_SH="/etc/profile.d/kenc.sh"
 
+ISSUE() {
+    echo "1.1.2.1"
+    echo "1.1.5"
+    echo "2.0.1"
+    echo "2.1.0"
+    echo "2.1.1"
+    echo "2.2.0"
+    echo "2.2.1"
+    echo "2.2.2"
+    echo "2.2.3"
+    echo "2.2.4"
+    echo "2.2.5"
+    echo "2.2.6"
+    echo "2.2.7"
+    echo "2.3.0"
+    echo "2.3.3"
+    echo "2.4.0"
+    echo "2.4.2"
+    echo "2.4.3"
+    echo "2.5.1"
+    echo "2.5.2"
+    echo "2.5.6"
+}
+
 
 colorEcho(){
     COLOR=$1
@@ -373,7 +397,7 @@ lookport() {
 }
 
 echo "-------------------------------------------------------"
-colorEcho ${GREEN} "欢迎使用本地加密隧道安装工具, 请输入操作号继续。"
+colorEcho ${GREEN} "欢迎使用kenc安装工具, 请输入操作号继续。"
 echo ""
 echo "项目地址：https://github.com/MinerProxyBTC/GoMinerTool"
 echo ""
@@ -382,3 +406,59 @@ echo "2、卸载"
 echo ""
 colorEcho ${YELLOW} "如果在此之前是手动安装的程序，请自己手动退出程序后再执行此脚本，否则容易发生冲突，所有操作尽量通过此脚本完成。"
 echo "-------------------------------------------------------"
+
+read -p "$(echo -e "请选择[1-6]：")" choose
+
+case $choose in
+1)
+    installapp 1.0.0
+    ;;
+2)
+    uninstall
+    ;;
+3)
+    update
+    ;;
+4)
+    start
+    ;;
+5)
+    restart
+    ;;
+6)
+    stop
+    ;;
+7)
+    set_port
+    ;;
+8)
+    change_limit
+    ;;
+9)
+    check_limit
+    ;;
+10)
+    turn_on
+    ;;
+11)
+    turn_off
+    ;;
+12)
+    check_hub
+    ;;
+13)
+    check_err
+    ;;
+14)
+    install_target
+    ;;
+15)
+    clearlog
+    ;;
+16)
+    lookport
+    ;;
+*)
+    echo "输入了错误的指令, 请重新输入。"
+    ;;
+esac
