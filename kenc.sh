@@ -4,7 +4,7 @@
 
 VERSION="1.1.2"
 
-DOWNLOAD_HOST="https://github.com/MinerProxyBTC/GoMinerTool/raw/main/kenc"
+DOWNLOAD_HOST="https://github.com/MinerProxyBTC/GoMinerTool/raw/main/KENC"
 
 PATH_KT="/root/kenc"
 
