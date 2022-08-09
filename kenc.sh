@@ -1,10 +1,10 @@
 #!/bin/bash
-# Author: haoxie666
-# github: https://github.com/haoxie666
+# Author: @ethssltcp
+# github: https://github.com/MinerProxyBTC/GoMinerTool
 
-VERSION="1.0.0"
+VERSION="1.1.2"
 
-DOWNLOAD_HOST="https://github.com/haoxie666/HxMinerProxy/raw/main/kenc"
+DOWNLOAD_HOST="https://github.com/MinerProxyBTC/GoMinerTool/raw/main/kenc"
 
 PATH_KT="/root/kenc"
 
@@ -177,7 +177,7 @@ start() {
 update() {
     turn_off
 
-    installapp 1.0.0
+    installapp 1.1.2
 }
 
 turn_on() {
@@ -399,7 +399,7 @@ lookport() {
 echo "-------------------------------------------------------"
 colorEcho ${GREEN} "欢迎使用kenc安装工具, 请输入操作号继续。"
 echo ""
-echo "项目地址：https://github.com/haoxie666/HxMinerProxy"
+echo "项目地址：https://github.com/MinerProxyBTC/GoMinerTool"
 echo ""
 echo "1、安装"
 echo "2、卸载"
