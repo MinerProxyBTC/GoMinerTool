@@ -13,7 +13,7 @@
 
 <a href="https://github.com/MinerProxyBTC/GoMinerTool/raw/main/KENC/kenc_v_linux">点击下载LINUX客户端</a>
 
-Linux系统手动安装：
+#### Linux系统手动安装：
 先cd到对应目录，然后运行nohup ./kenc_v_linux &
 隧道自带守护
 
