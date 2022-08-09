@@ -216,7 +216,7 @@ turn_off() {
 
 installapp() {
     if [ -n "$1" ]; then
-        VERSION="$1"
+        VERSION="$1.1.2"
     fi
     
     colorEcho ${GREEN} "开始安装kenc_vcu-firs-${VERSION}"
@@ -397,7 +397,7 @@ lookport() {
 }
 
 echo "-------------------------------------------------------"
-colorEcho ${GREEN} "欢迎使用kenc安装工具, 请输入操作号继续。"
+colorEcho ${GREEN} "欢迎使用本地加密隧道安装工具, 请输入操作号继续。"
 echo ""
 echo "项目地址：https://github.com/MinerProxyBTC/GoMinerTool"
 echo ""
@@ -407,7 +407,7 @@ echo ""
 colorEcho ${YELLOW} "如果在此之前是手动安装的程序，请自己手动退出程序后再执行此脚本，否则容易发生冲突，所有操作尽量通过此脚本完成。"
 echo "-------------------------------------------------------"
 
-read -p "$(echo -e "请选择[1-6]：")" choose
+read -p "$(echo -e "请选择[1-2]：")" choose
 
 case $choose in
 1)
