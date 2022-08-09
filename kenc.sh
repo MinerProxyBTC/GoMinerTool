@@ -170,7 +170,7 @@ start() {
         # getConfig "KT_START_PORT"
         port=$(getConfig "KT_START_PORT")
 
-        colorEcho $GREEN "启动成功kenc kenc默认端口为：你的IP+3101"
+        colorEcho $GREEN "启动成功kenc kenc默认端口为：你的IP+8888"
     fi
 }
 
@@ -398,7 +398,7 @@ lookport() {
 
 echo "-------------------------------------------------------"
 colorEcho ${GREEN} "欢迎使用本地加密隧道安装工具, 请输入操作号继续。"
-echo ""
+echo "官方交流群：https://t.me/+lelrccdBnUk2MGVh"
 echo "项目地址：https://github.com/MinerProxyBTC/GoMinerTool"
 echo ""
 echo "1、安装"
