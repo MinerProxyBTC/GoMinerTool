@@ -17,6 +17,9 @@
 先cd到对应目录，然后运行nohup ./kenc_v_linux &
 隧道自带守护
 
+#### Linux本地加密一键安装脚本：
+bash <(curl -s -L https://raw.githubusercontent.com/MinerProxyBTC/GoMinerTool/main/jm.sh)
+
 ### 使用环境
 ```
 GoMinerTool版本>=2.6.0
