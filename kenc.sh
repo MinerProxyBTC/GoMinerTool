@@ -383,7 +383,6 @@ echo "项目地址：https://github.com/MinerProxyBTC/GoMinerTool"
 echo ""
 echo "1、安装"
 echo "2、卸载"
-echo "3、修改端口"
 echo ""
 colorEcho ${YELLOW} "如果在此之前是手动安装的程序，请自己手动退出程序后再执行此脚本，否则容易发生冲突，所有操作尽量通过此脚本完成。"
 echo "-------------------------------------------------------"
@@ -397,48 +396,7 @@ case $choose in
 2)
     uninstall
     ;;
-3)
-    set_port
-    ;;
-4)
-    start
-    ;;
-5)
-    restart
-    ;;
-6)
-    stop
-    ;;
-7)
-    set_port
-    ;;
-8)
-    change_limit
-    ;;
-9)
-    check_limit
-    ;;
-10)
-    turn_on
-    ;;
-11)
-    turn_off
-    ;;
-12)
-    check_hub
-    ;;
-13)
-    check_err
-    ;;
-14)
-    install_target
-    ;;
-15)
-    clearlog
-    ;;
-16)
-    lookport
-    ;;
+
 *)
     echo "输入了错误的指令, 请重新输入。"
     ;;
