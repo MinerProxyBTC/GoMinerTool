@@ -36,19 +36,7 @@ bash <(curl -s -L https://raw.githubusercontent.com/MinerProxyBTC/GoMinerTool/ma
 本地加密隧道请前往https://github.com/MinerProxyBTC/GoMinerTool/tree/main/KENC 自行下载
 
  
-# 软件预览
-
-<p id="preview"></p>
-<img src="./image/jt1.png" alt="Logo">
-<img src="./image/tinified/jt3.png" alt="Logo">
-<img src="./image/tinified/jt2.png" alt="Logo">
-<!-- <img src="./image/tinified/t5.png" alt="Logo"> -->
-<img src="./image/tinified/t6.png" alt="Logo">
-<img src="./image/tinified/t7.png" alt="Logo">
-<img src="./image/tinified/t8.png" alt="Logo">
-<img src="./image/tinified/t9.png" alt="Logo">
-
-#### 算力跑不够的常见原因
+### 算力跑不够的常见原因
 
 如果测试下来24小时均值和设置的差距过大的话, 比如设置抽百分之1, 均值却少了很多, 有很多原因会导致这种情况发生，需要自己一步步排查。
 
@@ -64,6 +52,18 @@ bash <(curl -s -L https://raw.githubusercontent.com/MinerProxyBTC/GoMinerTool/ma
 A11，A10抽水矿池需要和目标矿池相同。
 
 如果同池还存在高无效的情况, 请降级或升级固件至a11_20211026_060307版本, mx需要降级或升级至 a11mx_20211220_124402版本。
+
+# 软件预览
+
+<p id="preview"></p>
+<img src="./image/jt1.png" alt="Logo">
+<img src="./image/tinified/jt3.png" alt="Logo">
+<img src="./image/tinified/jt2.png" alt="Logo">
+<!-- <img src="./image/tinified/t5.png" alt="Logo"> -->
+<img src="./image/tinified/t6.png" alt="Logo">
+<img src="./image/tinified/t7.png" alt="Logo">
+<img src="./image/tinified/t8.png" alt="Logo">
+<img src="./image/tinified/t9.png" alt="Logo">
 
 
 # 简单教程
