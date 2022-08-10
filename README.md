@@ -225,8 +225,6 @@ ___
 >>## 修改密码
 >>>安装完后请尽快前往设置页修改密码。
 >><span id="q6"></span>
->>## 启动时提示 dial tcp connection refused
->>>请将ktproxy.com添加至防火墙白名单中，这个域名提供了图表服务及认证
 >><span id="q7"></span>
 >>## 关闭/删除端口
 >>><img src="./image/t11.png" alt="Logo">
