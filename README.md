@@ -36,7 +36,7 @@ bash <(curl -s -L https://raw.githubusercontent.com/MinerProxyBTC/GoMinerTool/ma
 本地加密隧道请前往https://github.com/MinerProxyBTC/GoMinerTool/tree/main/KENC 自行下载
 
  
-### 算力跑不够的常见原因
+# 算力跑不够的常见原因
 
 如果测试下来24小时均值和设置的差距过大的话, 比如设置抽百分之1, 均值却少了很多, 有很多原因会导致这种情况发生，需要自己一步步排查。
 
@@ -47,7 +47,7 @@ bash <(curl -s -L https://raw.githubusercontent.com/MinerProxyBTC/GoMinerTool/ma
 还有检查挖矿软件配置及内核配置，是否设置超过多少分钟没有成功提交重启内核；查看你服务器的硬件配置及软件带宽，看你服务器的网络是否占用超过60%以上，配置过低可能导致转发性能不足，导致重发及超时；
 
 
-#### 常见的如奶牛、茉莉、亚米等机型, 需要用ETH端口, 芯动系列或其他的机型请选择ETH(GetWork)端口；如果设备无法正常接入，不同类型的端口可以交替着试一下。
+### 常见的如奶牛、茉莉、亚米等机型, 需要用ETH端口, 芯动系列或其他的机型请选择ETH(GetWork)端口；如果设备无法正常接入，不同类型的端口可以交替着试一下。
 
 A11，A10抽水矿池需要和目标矿池相同。
 
