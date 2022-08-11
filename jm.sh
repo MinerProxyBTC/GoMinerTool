@@ -201,7 +201,6 @@ change_limit(){
 
 echo "-------------------------------------------------------"
 colorEcho ${GREEN} "欢迎使用本地加密隧道安装工具, 请输入操作号继续。"
-"官方仓库：https://github.com/MinerProxyBTC/GoMinerTool"
 
 echo "1、安装隧道(amd64)"
 echo "2、安装隧道(arm64)"
