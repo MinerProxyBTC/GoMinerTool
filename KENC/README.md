@@ -10,12 +10,14 @@
 
 <a href="https://github.com/MinerProxyBTC/GoMinerTool/raw/main/KENC/windows.zip">点击下载WINDOWS客户端</a>
 
-<a href="https://github.com/MinerProxyBTC/GoMinerTool/raw/main/KENC/kenc_vcu-firs-1.1.2_linux">点击下载LINUX客户端</a>
+<a href="https://github.com/MinerProxyBTC/GoMinerTool/raw/main/KENC/kenc_linux_amd64">点击下载LINUX客户端</a>
+
+<a href="https://github.com/MinerProxyBTC/GoMinerTool/raw/main/KENC/kenc_linux_arm64">点击下载ARM平台客户端</a>
 
 #### Linux系统手动安装：
 先cd到对应目录，然后运行nohup ./kenc_v_linux &
 隧道自带守护;
-#### Linux本地加密一键安装脚本：
+#### Linux本地加密国内一键安装脚本：
 ```
 bash <(curl -s -L https://raw.githubusercontent.com/MinerProxyBTC/GoMinerTool/main/jm.sh)
 ```
