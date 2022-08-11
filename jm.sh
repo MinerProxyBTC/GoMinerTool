@@ -1,12 +1,12 @@
 #!/bin/bash
-# Author:https://t.me/ethssltcp
+# Author: https://t.me/ethssltcp
 # github: https://github.com/MinerProxyBTC/GoMinerTool
 
 DOWNLOAD_HOST=""
 
-AMD64_HOST="https://cdn.jsdelivr.net/gh/MinerProxyBTC/GoMinerTool@main/KENC/kenc_vcu-firs-1.1.2_linux"
+AMD64_HOST="https://cdn.jsdelivr.net/gh/MinerProxyBTC/GoMinerTool@main/KENC/kenc_linux_amd64"
 
-ARM64_HOST="https://cdn.jsdelivr.net/gh/MinerProxyBTC/GoMinerTool@main/KENC/arm"
+ARM64_HOST="https://cdn.jsdelivr.net/gh/MinerProxyBTC/GoMinerTool@main/KENC/kenc_linux_arm64"
 
 PATH_KENC="/root/kenc"
 
@@ -201,10 +201,10 @@ change_limit(){
 
 echo "-------------------------------------------------------"
 colorEcho ${GREEN} "欢迎使用本地加密隧道安装工具, 请输入操作号继续。"
-echo "官方交流群：https://t.me/+lelrccdBnUk2MGVh"
+
 echo ""
 echo "1、安装隧道(amd64)"
-echo "2、安装隧道(arm平台)"
+echo "2、安装隧道(arm64)"
 echo "3、重启隧道"
 echo "4、停止隧道"
 echo "5、卸载隧道"
@@ -218,12 +218,12 @@ read -p "$(echo -e "请选择[1-3]：")" choose
 
 case $choose in
 1)
-    DOWNLOAD_HOST=$kenc_vcu-firs-1.1.2_linux_HOST
-    installapp "kenc_vcu-firs-1.1.2_linux"
+    DOWNLOAD_HOST=$AMD64_HOST
+    installapp "amd64"
     ;;
 2)
-    DOWNLOAD_HOST=$ARM_HOST
-    installapp "arm"
+    DOWNLOAD_HOST=$ARM64_HOST
+    installapp "arm64"
     ;;
 3)
     restart
