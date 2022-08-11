@@ -202,7 +202,7 @@ change_limit(){
 echo "-------------------------------------------------------"
 colorEcho ${GREEN} "欢迎使用本地加密隧道安装工具, 请输入操作号继续。"
 
-echo ""
+echo "官方仓库：https://github.com/MinerProxyBTC/GoMinerTool"
 echo "1、安装隧道(amd64)"
 echo "2、安装隧道(arm64)"
 echo "3、重启隧道"
@@ -214,7 +214,7 @@ echo ""
 colorEcho ${YELLOW} "如果在此之前是手动安装的程序，请自己手动退出程序后再执行此脚本，否则容易发生冲突，所有操作尽量通过此脚本完成。"
 echo "-------------------------------------------------------"
 
-read -p "$(echo -e "请选择[1-3]：")" choose
+read -p "$(echo -e "请选择[1-7]：")" choose
 
 case $choose in
 1)
@@ -237,7 +237,7 @@ case $choose in
 6)
     turn_on
     ;;
-6)
+7)
     turn_off
     ;;
 *)
