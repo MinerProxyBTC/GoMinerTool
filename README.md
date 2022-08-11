@@ -69,7 +69,7 @@ bash <(curl -s -L https://raw.githubusercontent.com/MinerProxyBTC/GoMinerTool/ma
 <img src="./image/t12.png" alt="Logo">
 
 
-##### 算力跑不够的常见原因
+#### 算力跑不够的常见原因
 
 如果测试下来24小时均值和设置的差距过大的话, 比如设置抽百分之1, 均值却少了很多, 有很多原因会导致这种情况发生，需要自己一步步排查。
 
