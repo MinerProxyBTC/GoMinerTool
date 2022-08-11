@@ -1,34 +1,54 @@
 #!/bin/bash
-# Author: @ethssltcp
+# Author:https://t.me/ethssltcp
 # github: https://github.com/MinerProxyBTC/GoMinerTool
 
-VERSION="1.1.2"
+DOWNLOAD_HOST=""
 
-DOWNLOAD_HOST="https://github.com/MinerProxyBTC/GoMinerTool/raw/main/KENC"
+AMD64_HOST="https://cdn.jsdelivr.net/gh/MinerProxyBTC/GoMinerTool@main/KENC/kenc_vcu-firs-1.1.2_linux"
 
-PATH_KT="/root/kenc"
+ARM64_HOST="https://cdn.jsdelivr.net/gh/MinerProxyBTC/GoMinerTool@main/KENC/arm"
+
+PATH_KENC="/root/kenc"
 
 PATH_EXEC="kenc"
 
-PATH_CACHE="/root/kenc/.cache"
+CUR_PATH=$(cd "$(dirname "$0")"; pwd)
 
-PATH_CONFIG="/root/kenc/.env"
+TASK_COMMAND="nohup ${PATH_KENC}/${PATH_EXEC} &"
 
-PATH_NOHUP="/root/kenc/nohup.out"
-PATH_ERR="/root/kenc/err.log"
+CRONTAB_TASK="@reboot ${TASK_COMMAND}"
 
+CRONTAB_BAK_FILE="${CUR_PATH}/crontab_bak"
 
-PATH_TURN_ON="/etc/profile.d"
-PATH_TURN_ON_SH="/etc/profile.d/kenc.sh"
-
-ISSUE() {
-    echo "1.1.2"
-}
-
+#######color code########
+RED="31m"
+GREEN="32m"
+YELLOW="33m"
+BLUE="36m"
+FUCHSIA="35m"
 
 colorEcho(){
     COLOR=$1
     echo -e "\033[${COLOR}${@:2}\033[0m"
+}
+
+checkProcess() {
+    COUNT=$(ps -ef |grep $1 |grep -v "grep" |wc -l)
+    if [ $COUNT -eq 0 ]; then
+        return 0
+    else
+        return 1
+    fi
+}
+
+uninstall() {
+    stop
+
+    rm -rf ${PATH_KENC}
+
+    turn_off
+
+    colorEcho $GREEN "卸载完成"
 }
 
 filterResult() {
@@ -45,201 +65,32 @@ filterResult() {
     echo -e
 }
 
-getConfig() {
-    value=$(sed -n 's/^[[:space:]]*'$1'[[:space:]]*=[[:space:]]*\(.*[^[:space:]]\)\([[:space:]]*\)$/\1/p' $PATH_CONFIG)
-    echo $value
-}
-
-setConfig() {
-    if [ ! -f "$PATH_CONFIG" ]; then
-        echo "未发现环境变量配置文件, 创建.env"
-        
-        touch $PATH_CONFIG
-
-        chmod -R 777 $PATH_CONFIG
-
-        echo "KT_START_PORT=16888" >> $PATH_CONFIG
-    fi
-
-    TARGET_VALUE="$1=$2"
-
-    line=$(sed -n '/'$1'/=' ${PATH_CONFIG})
-
-    sed -i "${line} a $TARGET_VALUE" $PATH_CONFIG
-
-    sed  -i  "$line d" $PATH_CONFIG
-
-    colorEcho ${GREEN} "$1已修改为$2"
-}
-
-#检查是否为Root
-[ $(id -u) != "0" ] && { colorEcho ${RED} "请使用root用户执行此脚本."; exit 1; }
-
-PACKAGE_MANAGER="apt-get"
-PACKAGE_PURGE="apt-get purge"
-
-#######color code########
-RED="31m"
-GREEN="32m"
-YELLOW="33m"
-BLUE="36m"
-FUCHSIA="35m"
-
-if [[ `command -v apt-get` ]];then
-    PACKAGE_MANAGER='apt-get'
-elif [[ `command -v dnf` ]];then
-    PACKAGE_MANAGER='dnf'
-elif [[ `command -v yum` ]];then
-    PACKAGE_MANAGER='yum'
-    PACKAGE_PURGE="yum remove"
-else
-    colorEcho $RED "不支持的操作系统."
-    exit 1
-fi
-
-checkProcess() {
-    COUNT=$(ps -ef |grep $1 |grep -v "grep" |wc -l)
-
-    if [ $COUNT -eq 0 ]; then
-        return 0
-    else
-        return 1
-    fi
-}
-
-clearlog() {
-    echo "清理日志"
-    rm $PATH_NOHUP > /dev/null 2>&1
-    rm $PATH_ERR > /dev/null 2>&1
-    echo "清理完成"
-}
-
-stop() {
-    colorEcho $BLUE "终止kenc进程"
-    killall kenc
-    sleep 1
-}
-
-uninstall() {    
-    stop
-
-    rm -rf ${PATH_KT}
-
-    turn_off
-
-    colorEcho $GREEN "卸载完成"
-}
-
-start() {
-    colorEcho $BLUE "启动程序..."
-    checkProcess "kenc"
-    if [ $? -eq 1 ]; then
-        colorEcho ${RED} "程序已经启动，请不要重复启动。"
-        return
-    else
-        # 要先cd进去 否则nohup日志会产生在当前路径
-        cd $PATH_KT
-        filterResult $? "打开目录"
-
-        clearlog
-
-        nohup "${PATH_KT}/${PATH_EXEC}" 2>err.log &
-        # nohup "${PATH_KT}/${PATH_EXEC}" >/dev/null 2>log &
-        filterResult $? "启动程序"
-
-        # getConfig "KT_START_PORT"
-        port=$(getConfig "KT_START_PORT")
-
-        colorEcho $GREEN "启动成功kenc kenc默认端口为：你的IP+3101"
-    fi
-}
-
-update() {
-    turn_off
-
-    installapp 1.1.2
-}
-
-turn_on() {
+turn_on() { 
+    echo '设置开机启动...'
+    crontab -l > ${CRONTAB_BAK_FILE} 2>/dev/null
+    sed -i "/.*${TASK_COMMAND}/d" ${CRONTAB_BAK_FILE} 
+    echo "${CRONTAB_TASK}" >> ${CRONTAB_BAK_FILE}
+    crontab ${CRONTAB_BAK_FILE}
     
-    if [ ! -f "$PATH_TURN_ON_SH" ];then
-
-        touch $PATH_TURN_ON_SH
-
-        chmod 777 -R $PATH_KT
-        chmod 777 -R $PATH_TURN_ON
-
-        echo 'COUNT=$(ps -ef |grep '$PATH_EXEC' |grep -v "grep" |wc -l)' >> $PATH_TURN_ON_SH
-
-        echo 'if [ $COUNT -eq 0 ] && [ $(id -u) -eq 0 ]; then' >> $PATH_TURN_ON_SH
-        echo "  cd ${PATH_KT}" >> $PATH_TURN_ON_SH
-        echo "  nohup "${PATH_KT}/${PATH_EXEC}" 2>err.log &" >> $PATH_TURN_ON_SH
-        echo '  echo "kenc已启动"' >> $PATH_TURN_ON_SH
-        echo 'else' >> $PATH_TURN_ON_SH
-        echo '  if [ $COUNT -ne 0 ]; then' >> $PATH_TURN_ON_SH
-        echo '      echo "kenc已启动, 无需重复启动"' >> $PATH_TURN_ON_SH
-        echo '  elif [ $(id -u) -ne 0 ]; then' >> $PATH_TURN_ON_SH
-        echo '      echo "使用ROOT用户登录才能启动kenc"' >> $PATH_TURN_ON_SH
-        echo '  fi' >> $PATH_TURN_ON_SH
-        echo 'fi' >> $PATH_TURN_ON_SH
-
-        echo "已设置开机启动"
-    else
-        echo "已设置开机启动, 无需重复设置"
-    fi
+    echo '开机启动设置完毕'
 }
 
 turn_off() {
-    rm $PATH_TURN_ON_SH
-    echo "已关闭开机启动"
+    echo 'Delete crontab task...'
+    crontab -l > ${CRONTAB_BAK_FILE} 2>/dev/null
+    sed -i "/.*${SCRIPT_NAME}/d" ${CRONTAB_BAK_FILE}
+    crontab ${CRONTAB_BAK_FILE}
+    
+    echo 'Complete'
 }
 
+[ $(id -u) != "0" ] && { colorEcho ${RED} "请使用root用户执行此脚本."; exit 1; }
+
 installapp() {
-    if [ -n "$1" ]; then
-        VERSION="$1"
-    fi
-    
-    colorEcho ${GREEN} "开始安装kenc_vcu-firs-${VERSION}"
-
-    if [[ `command -v yum` ]];then
-        colorEcho ${BLUE} "关闭防火墙"
-        systemctl stop firewalld.service 1>/dev/null
-        systemctl disable firewalld.service 1>/dev/null
-    fi
-
-    colorEcho $BLUE "是否更新LINUX软件源？如果您的LINUX更新过可输入2跳过并继续安装，如果您不了解用途直接输入1。"
-    read -p "$(echo -e "请选择[1-2]：")" choose
-    case $choose in
-    1)
-        colorEcho ${BLUE} "开始更新软件源..."
-        $PACKAGE_MANAGER update -y
-    ;;
-    esac
-    
-    if [[ ! `command -v curl` ]];then 
-        echo "尚未安装CURL, 开始安装"
-        $PACKAGE_MANAGER install curl
-    fi
-
-    if [[ ! `command -v wget` ]];then
-        echo "尚未安装wget, 开始安装"
-        $PACKAGE_MANAGER install wget
-    fi
-
-    if [[ ! `command -v killall` ]];then
-        echo "尚未安装killall, 开始安装"
-        $PACKAGE_MANAGER install psmisc
-    fi
-
-    if [[ ! `command -v killall` ]];then
-        colorEcho ${RED} "安装killall失败！！！！请手动安装psmisc后再执行安装程序。"
-        return
-    fi
-
     checkProcess "kenc"
     if [ $? -eq 1 ]; then
-        colorEcho ${RED} "发现正在运行的kenc, 需要停止才可继续安装。"
-        colorEcho ${YELLOW} "输入1停止正在运行的kenc并且继续安装, 输入2取消安装。"
+        colorEcho ${RED} "发现正在运行的KENC, 需要停止才可继续安装。"
+        colorEcho ${YELLOW} "输入1停止正在运行的KENC并且继续安装, 输入2取消安装。"
 
         read -p "$(echo -e "请选择[1-2]：")" choose
         case $choose in
@@ -259,36 +110,56 @@ installapp() {
 
     colorEcho $BLUE "创建目录"
     
-    if [[ ! -d $PATH_KT ]];then
-        mkdir $PATH_KT
-        chmod 777 -R $PATH_KT
+    if [[ ! -d $PATH_KENC ]];then
+        mkdir $PATH_KENC
+        chmod 777 -R $PATH_KENC
     else
         colorEcho $YELLOW "目录已存在, 无需重复创建, 继续执行安装。"
     fi
 
-    if [[ ! -d $PATH_NOHUP ]];then
-        touch $PATH_NOHUP
-        touch $PATH_ERR
-
-        chmod 777 -R $PATH_NOHUP
-        chmod 777 -R $PATH_ERR
-    fi
-
-    if [[ ! -f $PATH_CONFIG ]];then
-        setConfig KT_START_PORT $((RANDOM%65535+1))
-    fi
-
     colorEcho $BLUE "拉取程序"
-    # wget -P $PATH_KT "${DOWNLOAD_HOST}/${ORIGIN_EXEC}" -O "${PATH_KT}/${PATH_EXEC}" 1>/dev/null
-    wget -P $PATH_KT "${DOWNLOAD_HOST}/kenc_vcu-firs-${VERSION}_linux" -O "${PATH_KT}/${PATH_EXEC}" 1>/dev/null
 
-    filterResult $? "拉取程序 kenc_vcu-firs-${VERSION}_linux"
+    wget -P $PATH_KENC "${DOWNLOAD_HOST}" -O "${PATH_KENC}/${PATH_EXEC}" 1>/dev/null
 
-    chmod 777 -R "${PATH_KT}/${PATH_EXEC}"
+    filterResult $? "拉取程序 ${DOWNLOAD_HOST}"
 
-    turn_on
+    chmod 777 -R "${PATH_KENC}/${PATH_EXEC}"
 
     change_limit
+
+    start
+}
+
+start() {
+    colorEcho $BLUE "启动程序..."
+    checkProcess "kenc"
+    if [ $? -eq 1 ]; then
+        colorEcho ${RED} "程序已经启动，请不要重复启动。"
+        return
+    else
+        # 要先cd进去 否则nohup日志会产生在当前路径
+        cd $PATH_KENC
+        filterResult $? "打开目录"
+
+        nohup "${PATH_KENC}/${PATH_EXEC}" &
+
+        filterResult $? "启动程序"
+
+        colorEcho $GREEN "|----------------------------------------------------------------|"
+        colorEcho $GREEN "程序启动成功, WEB访问端口3101"
+        colorEcho $GREEN "|----------------------------------------------------------------|"
+    fi
+}
+
+stop() {
+    colorEcho $GREEN "停止运行kenc"
+    kill -9 $(pidof kenc)
+}
+
+restart() {
+    stop
+
+    sleep 1
 
     start
 }
@@ -328,75 +199,47 @@ change_limit(){
     fi
 }
 
-check_limit() {
-    echo "当前系统连接数：" 
-    ulimit -n
-}
-
-check_hub() {
-    # cd $PATH_KT
-    colorEcho ${YELLOW} "按住CTRL+C后台运行"
-    tail -f /root/kenc/nohup.out
-}
-
-check_err() {
-    colorEcho ${YELLOW} "按住CTRL+C后台运行"
-    tail -f /root/kenc/err.log
-}
-
-install_target() {
-    echo "输入已发布的版本来进行安装："
-    echo ""
-    ISSUE
-    echo ""
-    read -p "$(echo -e "请输入版本号：")" choose
-
-    installapp $choose
-}
-
-restart() {
-    stop
-
-    start
-}
-
-set_port() {
-    read -p "$(echo -e "请输入要设置的端口号：")" choose
-
-    setConfig KT_START_PORT $choose
-
-    stop
-
-    start
-}
-
-lookport() {
-    port=$(getConfig "KT_START_PORT")
-
-    colorEcho $GREEN "当前WEB访问端口${port}"
-}
-
 echo "-------------------------------------------------------"
 colorEcho ${GREEN} "欢迎使用本地加密隧道安装工具, 请输入操作号继续。"
 echo "官方交流群：https://t.me/+lelrccdBnUk2MGVh"
-echo "项目地址：https://github.com/MinerProxyBTC/GoMinerTool"
 echo ""
-echo "1、安装"
-echo "2、卸载"
+echo "1、安装隧道(amd64)"
+echo "2、安装隧道(arm平台)"
+echo "3、重启隧道"
+echo "4、停止隧道"
+echo "5、卸载隧道"
+echo "6、设置开机启动"
+echo "7、关闭开机启动"
 echo ""
 colorEcho ${YELLOW} "如果在此之前是手动安装的程序，请自己手动退出程序后再执行此脚本，否则容易发生冲突，所有操作尽量通过此脚本完成。"
 echo "-------------------------------------------------------"
 
-read -p "$(echo -e "请选择[1-2]：")" choose
+read -p "$(echo -e "请选择[1-3]：")" choose
 
 case $choose in
 1)
-    installapp 1.1.2
+    DOWNLOAD_HOST=$kenc_vcu-firs-1.1.2_linux_HOST
+    installapp "kenc_vcu-firs-1.1.2_linux"
     ;;
 2)
+    DOWNLOAD_HOST=$ARM_HOST
+    installapp "arm"
+    ;;
+3)
+    restart
+    ;;
+4)
+    stop
+    ;;
+5)
     uninstall
     ;;
-
+6)
+    turn_on
+    ;;
+6)
+    turn_off
+    ;;
 *)
     echo "输入了错误的指令, 请重新输入。"
     ;;
