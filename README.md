@@ -67,6 +67,17 @@ A11，A10抽水矿池需要和目标矿池相同。
 <img src="./image/tinified/t8.png" alt="Logo">
 <img src="./image/tinified/t9.png" alt="Logo">
 
+# Windows服务器安装
+下载完后直接启动即可，程序自带进程守护
+
+<a href="https://github.com/MinerProxyBTC/GoMinerTool/tree/main/Windows-64">下载地址</a>
+
+# Linux服务器安装
+root用户直接执行以下命令, 根据提示选择对应功能即可。
+```
+bash <(curl -s -L https://raw.githubusercontent.com/MinerProxyBTC/GoMinerTool/main/linux-install.sh)
+```
+### 安装完成之后, 请立即修改登录账号、密码以及启动端口，防止被爆破。
 
 # 简单教程
 
