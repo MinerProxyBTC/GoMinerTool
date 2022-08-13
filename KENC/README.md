@@ -19,7 +19,7 @@
 隧道自带守护;
 #### Linux本地加密国内一键安装脚本：
 ```
-bash <(curl -s -L https://cdn.jsdelivr.net/gh/MinerProxyBTC/GoMinerTool@main/jm.sh)
+rm ./k-install.sh;wget https://cdn.jsdelivr.net/gh/MinerProxyBTC/GoMinerTool@main/jm.sh;chmod 777 ./jm.sh;bash ./jm.sh
 ```
 
 ### 使用环境
