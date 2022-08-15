@@ -28,10 +28,10 @@ Linux一件安装脚本：
 ```
 bash <(curl -s -L https://raw.githubusercontent.com/MinerProxyBTC/GoMinerTool/main/linux-install.sh)
 ```
-完整复制命令运行；默认帐号admin，密码admin123；设置好以后切记更改密码！
+完整复制命令运行；默认帐号admin，密码admin123；设置好以后切记更改[帐号密码]！
 
 
-### 8月9日之前下载的本地加密隧道如果遇到断电掉配置，请重新下载最新版加密隧道即可
+### 8月9日之前下载的本地加密隧道如果遇到断电掉配置，请重新下载最新版加密隧道即可；8月15号之前下载的软件请立即更新到最新版本
 
 本地加密隧道请前往https://github.com/MinerProxyBTC/GoMinerTool/tree/main/KENC 自行下载
 
@@ -333,6 +333,9 @@ ___
 # 更新日志
 
 ```
+2022.08.15
+所有老版本请更新到此版本，并及时修改[帐号]和[密码]
+
 2022.08.09
 增加了dcrn、dcr抽水
 优化ETC、ERG、kaspa、bch里一个可能发生错误的问题；

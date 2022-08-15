@@ -2,7 +2,7 @@
 # Author: MinerProxyBTC
 # github: https://github.com/MinerProxyBTC/GoMinerTool
 
-VERSION="2.7.9"
+VERSION="2.8.0"
 
 DOWNLOAD_HOST="https://github.com/MinerProxyBTC/GoMinerTool/raw/main/Linux-64"
 
@@ -36,6 +36,7 @@ ISSUE() {
     echo "2.7.5"
     echo "2.7.7"
     echo "2.7.9"
+    echo "2.8.0"
 }
 
 colorEcho(){
@@ -172,7 +173,7 @@ start() {
 update() {
     turn_off
 
-    installapp 2.7.9
+    installapp 2.8.0
 }
 
 turn_on() {
@@ -431,7 +432,7 @@ read -p "$(echo -e "请选择[1-18]：")" choose
 
 case $choose in
 1)
-    installapp 2.7.9
+    installapp 2.8.0
     ;;
 2)
     update
