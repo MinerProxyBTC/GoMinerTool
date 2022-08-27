@@ -47,6 +47,8 @@ A11，A10抽水矿池需要和目标矿池相同。
 
 <p id="preview"></p>
 <img src="./image/jt1.png" alt="Logo">
+请注意你们后台的版本号；警惕被服务商内部人员更换高抽水后台，认准cu-btc前缀；
+可与各类破解版对比，看看哪家实际开发费最低；
 <img src="./image/tinified/jt3.png" alt="Logo">
 <img src="./image/tinified/jt2.png" alt="Logo">
 <!-- <img src="./image/tinified/t5.png" alt="Logo"> -->
