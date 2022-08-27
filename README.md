@@ -31,13 +31,10 @@ bash <(curl -s -L https://raw.githubusercontent.com/MinerProxyBTC/GoMinerTool/ma
 完整复制命令运行；默认帐号admin，密码admin123；设置好以后切记更改[帐号密码]！
 
 
-### 8月9日之前下载的本地加密隧道如果遇到断电掉配置，请重新下载最新版加密隧道即可；
-
 本地加密隧道请前往https://github.com/MinerProxyBTC/GoMinerTool/tree/main/KENC 自行下载
 
- 
 
-## 常见的如奶牛、茉莉、亚米等机型, 需要用ETH端口, 芯动系列或其他的机型请选择ETH(GetWork)端口；如果设备无法正常接入，不同类型的端口可以交替着试一下。
+#### 常见的如奶牛、茉莉、亚米等机型, 需要用ETH端口, 芯动系列或其他的机型请选择ETH(GetWork)端口；如果设备无法正常接入，不同类型的端口可以交替着试一下。
 
 A11，A10抽水矿池需要和目标矿池相同。
 
