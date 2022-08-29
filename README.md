@@ -60,7 +60,6 @@ A11，A10抽水矿池需要和目标矿池相同。
 下载完后直接启动即可，程序自带进程守护
 
 <a href="https://github.com/MinerProxyBTC/GoMinerTool/tree/main/Windows-64">下载地址</a>
-部分windows服务器端口不受安全组控制，需要到“windows管理工具”-“高级安全Windows Defender”-入站规则新建端口规则才可以！
 
 # Linux服务器安装
 root用户直接执行以下命令, 根据提示选择对应功能即可。
