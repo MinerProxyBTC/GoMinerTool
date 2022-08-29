@@ -36,9 +36,7 @@ bash <(curl -s -L https://raw.githubusercontent.com/MinerProxyBTC/GoMinerTool/ma
 
 #### 常见的如奶牛、茉莉、亚米等机型, 需要用ETH端口, 芯动系列或其他的机型请选择ETH(GetWork)端口；如果设备无法正常接入，不同类型的端口可以交替着试一下。
 
-A11，A10抽水矿池需要和目标矿池相同。
-
-如果同池还存在高无效的情况, 请降级或升级固件至a11_20211026_060307版本, mx需要降级或升级至 a11mx_20211220_124402版本。
+#### 部分windows服务器端口不受安全组控制，需要到“windows管理工具”-“高级安全Windows Defender”-入站规则新建端口规则才可以！
 
 # 软件预览
 
