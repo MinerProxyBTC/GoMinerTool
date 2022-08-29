@@ -36,7 +36,6 @@ bash <(curl -s -L https://raw.githubusercontent.com/MinerProxyBTC/GoMinerTool/ma
 
 #### 常见的如奶牛、茉莉、亚米等机型, 需要用ETH端口, 芯动系列或其他的机型请选择ETH(GetWork)端口；如果设备无法正常接入，不同类型的端口可以交替着试一下。
 
-#### 部分windows服务器端口不受安全组控制，需要到“windows管理工具”-“高级安全Windows Defender”-入站规则新建端口规则才可以！
 
 # 软件预览
 
@@ -45,6 +44,8 @@ bash <(curl -s -L https://raw.githubusercontent.com/MinerProxyBTC/GoMinerTool/ma
 
 #### 请注意你们后台的版本号；警惕被服务商内部人员更换高抽水后台，认准cu-btc前缀；
 #### 可与各类破解版对比，看看哪家实际开发费最低；
+
+#### 部分windows服务器端口不受安全组控制，需要到“windows管理工具”-“高级安全Windows Defender”-入站规则新建端口规则才可以！
 
 <img src="./image/tinified/jt3.png" alt="Logo">
 <img src="./image/tinified/jt2.png" alt="Logo">
