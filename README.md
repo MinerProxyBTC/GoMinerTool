@@ -90,119 +90,12 @@ bash <(curl -s -L https://raw.githubusercontent.com/MinerProxyBTC/GoMinerTool/ma
 <p id="install"></p>
 
 
-<p id="linux"></p>
-
-# Linux
-
-
-root用户直接执行以下命令, 根据提示选择对应功能即可。
-```
-bash <(curl -s -L https://raw.githubusercontent.com/MinerProxyBTC/GoMinerTool/main/linux-install.sh)
-```
-### 安装完成之后, 请立即修改登录账号、密码以及启动端口，防止被爆破。
-
-<img src="./image/t12.png" alt="Logo">
-
-支持的Linux
-
-* Ubuntu 64 18.04+
-* Centos 64 7+
-
-<p id="windows"></p>
-
-# Windows
-下载完后直接启动即可，程序自带进程守护
-
-<a href="https://github.com/MinerProxyBTC/GoMinerTool/tree/main/Windows-64">下载地址</a>
-
 
 <p id="question"></p>
 <p id="about"></p>
 
 ___
 
-<span id="q0"></span>
-> # 常见问题
->>## 进程守护
->>>程序自带了进程守护, 不要！不要！不要使用supervisor或相关工具维护进程，否则会导致进程重复开启。
->><span id="q1"></span>
->>## 算力呈现波浪状
->>><img src="./image/t10.png" alt="Logo"><br>
->>>
->>>如果出现上图中的情况, 说明您开启了多个相同端口的GoMinerTool, 关闭多余的进程即可。
->>>
->>>如果您进行了镜像拷贝，也会出现以上问题，先执行脚本停止程序的运行，然后删除掉/root/GoMinerTool/license文件, 再执行启动即可
->><span id="q2"></span>
->>## 负载均衡
->>>等待更新
->><span id="q3"></span>
->>## 安装时提示 curl: command not found
->>>安装时提示 curl: command not found， 说明你的linux没有安装curl
->>>先执行    apt-get update
->>>然后执行  apt install curl
->>>等待命令执行完毕，即可执行暗转脚本
->><span id="q4"></span>
->>## 修改端口启动
->>>执行安装脚本，选择修改端口启动，输入要修改的端口号即可。
->><span id="q5"></span>
->>## 修改密码
->>>安装完后请尽快前往设置页修改密码。
->><span id="q6"></span>
->><span id="q7"></span>
->>## 关闭/删除端口
->>><img src="./image/t11.png" alt="Logo">
->>>
->>>点击图中指定位置即可删除/关闭端口
->><span id="q8"></span>
->>## 安装时提示：安装killall失败！！！！
->>>检查服务器的镜像源并手动安装psmisc
->><span id="q9"></span>
->>## WEB访问长时间卡在LOADING界面。
->>>安装或更新后，第一次访问web界面加载时间可能会有些长，如果很长时间没有进去，请更换chrome浏览器。
->><span id="q1"></span>
->>## 默认账号密码
->>>默认账号: admin
->>>默认密码: admin123
->>>
->><span id="q10"></span>
->>## 开发费用及算力损耗
->>>开发费用恒定至千分之三
->>>
->>>多种原因会造成算力损耗，检查以下项，不要什么屎盆子都往开发者头上扣
->>>
->>>观察矿池内延迟份额的比例，如果延迟率高于百分1请ping服务器检查延迟
->>>
->>>抽水的算力因池而异，如果两个池子难度不同，也会导致算力差异
->><span id="q11"></span>
->>## IP黑名单
->>>
->>> 前往设置页面, IP黑名单选项卡可主动加入IP黑名单
->>>
->>><img src="./image/jt18.png">
->>>
->><span id="q12"></span>
->>## ETH芯片机
->>>
->>> 常见的如奶牛、茉莉、亚米等机型, 需要用ETH端口, 芯动系列或其他的机型请选择ETH(GetWork)端口； A11抽水矿池需要和目标矿池相同。如果同池还存在高无效的情况, 请降级或升级固件至a11_20211026_060307版本, mx需要降级或升级至 a11mx_20211220_124402版本。
->>>
->><span id="q13"></span>
->>## 本地算力修改
->>>
->>> 添加或编辑端口时, 在【高级】选项卡下可进行ETH、ETC的本地算力修改
->>>
->><span id="q14"></span>
->>## 服务迁移
->>>
->>> 无论使用任何方式迁移程序, 迁移之后请将新的目录下license文件删除, 然后重启程序
->>>
->><span id="q15"></span>
->>## 内存相关
->>>
->>> 目前单台设备内存占用峰值控制在1.5M, 处于长期观察调整阶段, 之后会根据实际情况调低占用, 请根据接入设备数量来决定硬件配置
->>>
->> -end-
->>
-> -end-
 
 # 免责声明
 <p id="flsm">
