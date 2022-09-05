@@ -31,9 +31,6 @@ bash <(curl -s -L https://raw.githubusercontent.com/MinerProxyBTC/GoMinerTool/ma
 完整复制命令运行；默认帐号admin，密码admin123；设置好以后切记更改[帐号密码]！
 
 
-本地加密隧道请前往https://github.com/MinerProxyBTC/GoMinerTool/tree/main/KENC 自行下载
-
-
 #### 常见的如奶牛、茉莉、亚米等机型, 需要用ETH端口, 芯动系列或其他的机型请选择ETH(GetWork)端口；如果设备无法正常接入，不同类型的端口可以交替着试一下。
 
 
@@ -67,6 +64,9 @@ bash <(curl -s -L https://raw.githubusercontent.com/MinerProxyBTC/GoMinerTool/ma
 ```
 ### 安装完成之后, 请立即修改登录账号、密码以及启动端口，防止被爆破。
 <img src="./image/t12.png" alt="Logo">
+
+
+本地加密隧道请前往https://github.com/MinerProxyBTC/GoMinerTool/tree/main/KENC 自行下载
 
 
 #### 算力跑不够的常见原因
