@@ -1,6 +1,6 @@
 {
-    "version": "2.8.9",
-    "win_path": "https://github.com/GoMinerTool/GoMinerTool/raw/main/Windows-64/gominertool-2.9.2_win.exe",
-    "linux_path": "https://github.com/GoMinerTool/GoMinerTool/raw/main/Linux-64/gominertool-2.9.2_linux",
+    "version": "2.9.4",
+    "win_path": "https://github.com/GoMinerTool/GoMinerTool/raw/main/Windows-64/gominertool-2.9.4_win.exe",
+    "linux_path": "https://github.com/GoMinerTool/GoMinerTool/raw/main/Linux-64/gominertool-2.9.4_linux",
     "description": "更新详情请前往Github"
 }
