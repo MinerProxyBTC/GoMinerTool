@@ -17,7 +17,7 @@
     <h3>Web操作界面，简单易用，小白也可轻松上手，支持ETH/ETC/BTC/LTC/CFX/RVN/ERG/XMR等多个币种；欢迎实测对比</h3>
     <img src="./image/jt1.png" alt="Logo">
     <a href="https://kdocs.cn/l/slPG1q488Trc"></a>
-    Telegram交流群：<a href="https://t.me/+Qam442PoHcs0YmIx">https://t.me/+Qam442PoHcs0YmIx</a>
+    Telegram交流群：<a href="https://t.me/RustMinerSystem">https://t.me/+Qam442PoHcs0YmIx</a>
   </p>
 </div>
 
